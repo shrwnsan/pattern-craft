@@ -6,7 +6,7 @@ import { Toaster } from "sonner";
 import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://patterncraft.vercel.app"),
+  metadataBase: new URL("https://pattern-craft.vercel.app/"),
   title: "PatternCraft - Modern Background Patterns & Gradients",
   description:
     "Professional-grade background patterns and gradients for your websites and apps. Easily copy and paste into your next project. Crafted with modern CSS and Tailwind for seamless integration.",
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     title: "PatternCraft - Modern Background Patterns & Gradients",
     description:
       "Explore a collection of handcrafted background patterns and gradients for modern websites. Easy to use and customize.",
-    url: "https://patterncraft.vercel.app", 
+    url: "https://pattern-craft.vercel.app/",
     type: "website",
     images: [
       {
         url: "/banner.png",
         width: 1200,
         height: 630,
-        alt: "PatternCraft Open Graph Cover",
+        alt: "Typeout Blog",
       },
     ],
   },
