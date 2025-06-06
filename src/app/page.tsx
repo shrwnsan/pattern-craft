@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <div className="min-h-screen relative">
           {/* Apply the active pattern as background */}
           {activePatternObj && (

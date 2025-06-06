@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: "PatternCraft - Modern Background Patterns & Gradients",
     description:
       "Explore a collection of handcrafted background patterns and gradients for modern websites. Easy to use and customize.",
-    url: "https://patterncraft.vercel.app", // update this if your actual domain is different
+    url: "https://patterncraft.vercel.app", 
     type: "website",
     images: [
       {
-        url: "/og-banner.jpg", // replace with your actual image path
+        url: "/banner.png",
         width: 1200,
         height: 630,
         alt: "PatternCraft Open Graph Cover",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "PatternCraft - Modern Background Patterns & Gradients",
     description:
       "A curated set of ready-to-use background patterns and gradients. Crafted with Tailwind CSS and modern techniques.",
-    images: ["/og-banner.jpg"], // same as above
+    images: ["/banner.png"],
   },
 };
 
@@ -51,7 +51,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
         >
           {children}
