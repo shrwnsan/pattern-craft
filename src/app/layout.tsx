@@ -47,14 +47,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.className} bg-background text-foreground antialiased`}
+        className={`${GeistSans.className} bg-background text-foreground antialiased min-h-screen flex items-center justify-center`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
         >
-          {children}
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {children}
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>
