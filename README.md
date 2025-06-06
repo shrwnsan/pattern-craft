@@ -85,7 +85,7 @@ These snippets work great for:
 
 ## Demo
 
-[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+[Watch the demo video](https://github.com/user-attachments/assets/c283ecbc-8732-412b-adab-5c17d1a390cc)
 
 ## Usage
 
@@ -245,6 +245,7 @@ For questions, issues, or suggestions:
 
 If you like this project, consider giving it a ⭐️ on GitHub and sharing it with others!
 
-**Happy coding!**
+---
 
+**Happy coding!**
 ---
