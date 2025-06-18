@@ -2,7 +2,7 @@
 
 Professional-grade background patterns and gradients for modern web applications. A curated collection of CSS patterns that you can copy and integrate into your projects instantly.
 
-**Visit**: **[https://pattern-craft.vercel.app/](https://pattern-craft.vercel.app/)**
+**Visit**: **[Pattern Craft](https://patterncraft.megh.me)**
 
 ![UI Image](./public/images/one.png)
 ![UI Image](./public/images/two.png)
@@ -247,5 +247,4 @@ If you like this project, consider giving it a ⭐️ on GitHub and sharing it w
 
 ---
 
-**Happy coding!**
----
+## **Happy coding!**
