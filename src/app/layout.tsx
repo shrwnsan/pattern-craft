@@ -6,12 +6,12 @@ import { Toaster } from "sonner";
 import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pattern-craft.vercel.app/"),
+  metadataBase: new URL("https://patterncraft.megh.me"),
   title: "PatternCraft - Modern Background Patterns & Gradients",
   description:
     "Professional-grade background patterns and gradients for your websites and apps. Easily copy and paste into your next project. Crafted with modern CSS and Tailwind for seamless integration.",
   keywords:
-    "background patterns, background snippets, gradients, Tailwind CSS, modern CSS, web design, UI background, CSS snippets, frontend resources, front-end snippets",
+    "background patterns, background snippets, gradients, Tailwind CSS, modern CSS, web design, UI background, CSS snippets, frontend resources, front-end snippets, backgrounds, patterns, CSS patterns, website backgrounds, modern UI, web design assets",
   icons: {
     icon: "/favicon.svg",
   },
@@ -19,14 +19,15 @@ export const metadata: Metadata = {
     title: "PatternCraft - Modern Background Patterns & Gradients",
     description:
       "Explore a collection of handcrafted background patterns and gradients for modern websites. Easy to use and customize.",
-    url: "https://pattern-craft.vercel.app/",
+    url: "https://patterncraft.megh.me",
+    siteName: "Pattern Craft",
     type: "website",
     images: [
       {
         url: "/banner.png",
         width: 1200,
         height: 630,
-        alt: "Typeout Blog",
+        alt: "PatternCraft – Modern Background Patterns and Gradients",
       },
     ],
   },
@@ -36,6 +37,10 @@ export const metadata: Metadata = {
     description:
       "A curated set of ready-to-use background patterns and gradients. Crafted with Tailwind CSS and modern techniques.",
     images: ["/banner.png"],
+    creator: "@meghtrix",
+  },
+  alternates: {
+    canonical: "https://patterncraft.megh.me",
   },
 };
 
