@@ -1609,4 +1609,233 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  // New Ellipse Glow Pattern
+  {
+    id: "aurora-midnight-glow",
+    name: "Aurora Midnight Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* X Organizations Black Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "crimson-shadow-glow",
+    name: "Crimson Shadow Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 80, 120, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Crimson Shadow Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 80, 120, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "emerald-depths-glow",
+    name: "Emerald Depths Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Emerald Depths Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "violet-storm-glow",
+    name: "Violet Storm Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Violet Storm Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "golden-horizon-glow",
+    name: "Golden Horizon Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251, 191, 36, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Golden Horizon Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251, 191, 36, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "ocean-abyss-glow",
+    name: "Ocean Abyss Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(6, 182, 212, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Ocean Abyss Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(6, 182, 212, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "rose-twilight-glow",
+    name: "Rose Twilight Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(244, 114, 182, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Rose Twilight Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(244, 114, 182, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "copper-forge-glow",
+    name: "Copper Forge Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249, 115, 22, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Copper Forge Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249, 115, 22, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "arctic-lights-glow",
+    name: "Arctic Lights Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Arctic Lights Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "indigo-cosmos-glow",
+    name: "Indigo Cosmos Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Indigo Cosmos Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "pearl-mist-glow",
+    name: "Pearl Mist Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Pearl Mist Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "magenta-nebula-glow",
+    name: "Magenta Nebula Glow",
+    style: {
+      background:
+        "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(236, 72, 153, 0.25), transparent 70%), #000000",
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Magenta Nebula Background with Top Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(236, 72, 153, 0.25), transparent 70%), #000000",
+      }}
+    />
+  
+    {/* Your Content/Components */}
+  </div>`,
+  },
 ];
