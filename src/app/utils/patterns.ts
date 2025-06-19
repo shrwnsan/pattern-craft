@@ -1613,6 +1613,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "aurora-midnight-glow",
     name: "Aurora Midnight Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000",
@@ -1632,6 +1633,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "crimson-shadow-glow",
     name: "Crimson Shadow Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 80, 120, 0.25), transparent 70%), #000000",
@@ -1651,6 +1653,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "emerald-depths-glow",
     name: "Emerald Depths Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000",
@@ -1670,6 +1673,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "violet-storm-glow",
     name: "Violet Storm Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",
@@ -1689,6 +1693,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "golden-horizon-glow",
     name: "Golden Horizon Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251, 191, 36, 0.25), transparent 70%), #000000",
@@ -1708,6 +1713,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "ocean-abyss-glow",
     name: "Ocean Abyss Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(6, 182, 212, 0.25), transparent 70%), #000000",
@@ -1727,6 +1733,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "rose-twilight-glow",
     name: "Rose Twilight Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(244, 114, 182, 0.25), transparent 70%), #000000",
@@ -1746,6 +1753,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "copper-forge-glow",
     name: "Copper Forge Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249, 115, 22, 0.25), transparent 70%), #000000",
@@ -1765,6 +1773,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "arctic-lights-glow",
     name: "Arctic Lights Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #000000",
@@ -1784,6 +1793,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "indigo-cosmos-glow",
     name: "Indigo Cosmos Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
@@ -1803,6 +1813,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "pearl-mist-glow",
     name: "Pearl Mist Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
@@ -1822,6 +1833,7 @@ export const gridPatterns: Pattern[] = [
   {
     id: "magenta-nebula-glow",
     name: "Magenta Nebula Glow",
+    badge: "New",
     style: {
       background:
         "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(236, 72, 153, 0.25), transparent 70%), #000000",
