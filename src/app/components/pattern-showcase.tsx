@@ -96,69 +96,103 @@ export default function PatternShowcase({
       >
         {/* Desktop & Tablet Tabs (show on sm and up) */}
         <TabsList
-          className="
+          className={`
     hidden sm:grid
     grid-cols-2 sm:grid-cols-3 md:grid-cols-5
     w-full h-auto p-1.5
-    bg-muted/50 backdrop-blur-sm
-    rounded-xl border border-border/50 shadow-sm mb-8
-  "
+    backdrop-blur-md shadow-lg border
+    rounded-xl mb-8 transition-all duration-300
+    ${
+      isPatternDark
+        ? "bg-black/20 border-white/10 hover:bg-black/30"
+        : "bg-white/70 border-gray-200/30 hover:bg-white/80"
+    }
+  `}
         >
           {categories.map((category) => (
             <TabsTrigger
               key={category.id}
               value={category.id}
-              className="
+              className={`
         flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 
         py-2.5 px-2 sm:px-3 lg:px-4
         text-xs sm:text-sm font-medium
         rounded-lg
-        transition-all duration-200 ease-in-out
-        data-[state=active]:bg-background 
-        data-[state=active]:text-foreground 
-        data-[state=active]:shadow-sm
-        data-[state=active]:border 
-        data-[state=active]:border-border/20
-        data-[state=inactive]:text-muted-foreground 
-        data-[state=inactive]:hover:text-foreground
-        data-[state=inactive]:hover:bg-muted/30
+        transition-all duration-300 ease-in-out
         min-h-[44px] sm:min-h-[40px]
         relative overflow-hidden
         group
-      "
+        ${
+          isPatternDark
+            ? `data-[state=active]:bg-white/10 data-[state=active]:text-white 
+               data-[state=active]:shadow-lg data-[state=active]:border 
+               data-[state=active]:border-white/20 data-[state=active]:backdrop-blur-sm
+               data-[state=inactive]:text-gray-300 
+               data-[state=inactive]:hover:text-white
+               data-[state=inactive]:hover:bg-white/5`
+            : `data-[state=active]:bg-white/90 data-[state=active]:text-gray-900 
+               data-[state=active]:shadow-lg data-[state=active]:border 
+               data-[state=active]:border-gray-200/40 data-[state=active]:backdrop-blur-sm
+               data-[state=inactive]:text-gray-600 
+               data-[state=inactive]:hover:text-gray-900
+               data-[state=inactive]:hover:bg-white/40`
+        }
+      `}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-background/80 to-background/60 opacity-0 data-[state=active]:opacity-100 transition-opacity duration-200 rounded-lg" />
+              <div
+                className={`
+          absolute inset-0 rounded-lg opacity-0 
+          data-[state=active]:opacity-100 transition-all duration-300
+          ${
+            isPatternDark
+              ? "bg-gradient-to-br from-white/15 to-white/5"
+              : "bg-gradient-to-br from-white/95 to-white/80"
+          }
+        `}
+              />
               <span className="font-medium z-10 text-center leading-tight">
                 {category.label}
               </span>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary rounded-full transition-all duration-300 group-data-[state=active]:w-8" />
+              <div
+                className={`
+          absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 
+          rounded-full transition-all duration-300 
+          group-data-[state=active]:w-8
+          ${isPatternDark ? "bg-white/60" : "bg-primary"}
+        `}
+              />
             </TabsTrigger>
           ))}
         </TabsList>
 
         {/* Mobile Tabs (show on xs only) */}
-<div className="block sm:hidden mb-6">
-  <div className="flex flex-wrap gap-2 px-1 pb-2">
-    {categories.map((category) => (
-      <button
-        key={`mobile-${category.id}`}
-        onClick={() => setActiveTab(category.id)}
-        className={`
+        <div className="block sm:hidden mb-6">
+          <div className="flex flex-wrap gap-2 px-1 pb-2">
+            {categories.map((category) => (
+              <button
+                key={`mobile-${category.id}`}
+                onClick={() => setActiveTab(category.id)}
+                className={`
           flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap
-          text-sm font-medium transition-all duration-200
+          text-sm font-medium transition-all duration-300 ease-in-out
+          backdrop-blur-md shadow-lg border
+          hover:scale-[1.02] hover:shadow-xl
           ${
             activeTab === category.id
-              ? "bg-primary text-primary-foreground shadow-sm"
-              : "bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground"
+              ? isPatternDark
+                ? "bg-white/15 text-white border-white/20 shadow-lg"
+                : "bg-white/90 text-gray-900 border-gray-200/40 shadow-lg"
+              : isPatternDark
+              ? "bg-black/20 text-gray-300 border-white/10 hover:bg-black/30 hover:text-white hover:border-white/20"
+              : "bg-white/60 text-gray-600 border-gray-200/30 hover:bg-white/80 hover:text-gray-900 hover:border-gray-300/40"
           }
         `}
-      >
-        <span>{category.label}</span>
-      </button>
-    ))}
-  </div>
-</div>
-
+              >
+                <span>{category.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
 
         {categories.map((category) => (
           <TabsContent key={category.id} value={category.id} className="mt-0">
