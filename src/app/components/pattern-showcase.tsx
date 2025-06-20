@@ -30,7 +30,6 @@ export default function PatternShowcase({
     { id: "all", label: "All Patterns" },
     { id: "gradients", label: "Gradients" },
     { id: "geometric", label: "Geometric" },
-    { id: "organic", label: "Organic" },
     { id: "decorative", label: "Decorative" },
     { id: "effects", label: "Effects" },
   ];
@@ -96,7 +95,15 @@ export default function PatternShowcase({
         className="w-full mb-8"
       >
         {/* Desktop & Tablet Tabs (show on sm and up) */}
-        <TabsList className="hidden sm:grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 w-full h-auto p-1.5 bg-muted/50 backdrop-blur-sm rounded-xl border border-border/50 shadow-sm mb-8">
+        <TabsList
+          className="
+    hidden sm:grid
+    grid-cols-2 sm:grid-cols-3 md:grid-cols-5
+    w-full h-auto p-1.5
+    bg-muted/50 backdrop-blur-sm
+    rounded-xl border border-border/50 shadow-sm mb-8
+  "
+        >
           {categories.map((category) => (
             <TabsTrigger
               key={category.id}
@@ -130,13 +137,13 @@ export default function PatternShowcase({
         </TabsList>
 
         {/* Mobile Tabs (show on xs only) */}
-        <div className="block sm:hidden mb-6">
-          <div className="flex overflow-x-auto scrollbar-hide gap-2 px-1 pb-2">
-            {categories.map((category) => (
-              <button
-                key={`mobile-${category.id}`}
-                onClick={() => setActiveTab(category.id)}
-                className={`
+<div className="block sm:hidden mb-6">
+  <div className="flex flex-wrap gap-2 px-1 pb-2">
+    {categories.map((category) => (
+      <button
+        key={`mobile-${category.id}`}
+        onClick={() => setActiveTab(category.id)}
+        className={`
           flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap
           text-sm font-medium transition-all duration-200
           ${
@@ -144,14 +151,14 @@ export default function PatternShowcase({
               ? "bg-primary text-primary-foreground shadow-sm"
               : "bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground"
           }
-
         `}
-              >
-                <span>{category.label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
+      >
+        <span>{category.label}</span>
+      </button>
+    ))}
+  </div>
+</div>
+
 
         {categories.map((category) => (
           <TabsContent key={category.id} value={category.id} className="mt-0">
