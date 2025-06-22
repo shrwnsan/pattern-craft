@@ -1,6 +1,37 @@
 import { Pattern } from "../types/pattern";
 
 export const gridPatterns: Pattern[] = [
+
+  {
+  id: "tri-point-blend",
+  name: "Tri-Point Blend",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "#fafafa",
+    backgroundImage: `
+      radial-gradient(circle at 0%   0%,   #ff9a8b 0%, transparent 50%),
+      radial-gradient(circle at 100% 0%,   #ffd3b5 0%, transparent 50%),
+      radial-gradient(circle at 50%  100%, #6a90f2 0%, transparent 50%)
+    `,
+    backgroundSize: "cover",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Tri-Point Blend Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at 0%   0%,   #ff9a8b 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%,   #ffd3b5 0%, transparent 50%),
+        radial-gradient(circle at 50%  100%, #6a90f2 0%, transparent 50%)
+      \`,
+      backgroundSize: "cover",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
   {
     id: "purple-gradient-grid-right",
     name: "Purple Gradient Grid Right",
@@ -31,6 +62,112 @@ export const gridPatterns: Pattern[] = [
    {/* Your Content/Components */}
 </div>`,
   },
+  {
+  id: "radial-teal-glow",
+  name: "Teal Glow",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "#ffffff",
+    backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 100%)
+    `,
+    backgroundSize: "100% 100%",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Teal Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "radial-pink-glow",
+  name: "Pink Glow",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "#ffffff",
+    backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
+    `,
+    backgroundSize: "100% 100%",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Pink Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "radial-amber-glow",
+  name: "Amber Glow",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "#ffffff",
+    backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)
+    `,
+    backgroundSize: "100% 100%",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Amber Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+{
+  id: "radial-emerald-glow",
+  name: "Emerald Glow",
+  badge: "New",
+  category: "decorative",
+  style: {
+    background: "#ffffff",
+    backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)
+    `,
+    backgroundSize: "100% 100%",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Emerald Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+},
+
+
   {
     id: "purple-gradient-grid-left",
     name: "Purple Gradient Grid Left",
