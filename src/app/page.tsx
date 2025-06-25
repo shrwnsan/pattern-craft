@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { ThemeProvider } from "./components/theme-provider";
 import { gridPatterns } from "./utils/patterns";
 import { Toaster } from "sonner";
+import SupportDropdown from "./components/SupportDropdownProps ";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
@@ -47,6 +48,7 @@ export default function Home() {
           )}
           <div className="relative z-10">
             <Navbar theme={theme} />
+            <SupportDropdown theme={theme}/>
             <Hero
               activePattern={activePattern}
               setActivePattern={setActivePattern}
