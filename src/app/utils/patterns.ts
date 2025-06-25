@@ -1,203 +1,6 @@
 import { Pattern } from "../types/pattern";
 
 export const gridPatterns: Pattern[] = [
-
-  {
-  id: "tri-point-blend",
-  name: "Tri-Point Blend",
-  badge: "New",
-  category: "decorative",
-  style: {
-    background: "#fafafa",
-    backgroundImage: `
-      radial-gradient(circle at 0%   0%,   #ff9a8b 0%, transparent 50%),
-      radial-gradient(circle at 100% 0%,   #ffd3b5 0%, transparent 50%),
-      radial-gradient(circle at 50%  100%, #6a90f2 0%, transparent 50%)
-    `,
-    backgroundSize: "cover",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Tri-Point Blend Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(circle at 0%   0%,   #ff9a8b 0%, transparent 50%),
-        radial-gradient(circle at 100% 0%,   #ffd3b5 0%, transparent 50%),
-        radial-gradient(circle at 50%  100%, #6a90f2 0%, transparent 50%)
-      \`,
-      backgroundSize: "cover",
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-  {
-    id: "purple-gradient-grid-right",
-    name: "Purple Gradient Grid Right",
-    badge: "New",
-    category: "geometric",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-      radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)
-    `,
-      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
-    },
-    code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Purple Gradient Grid Right Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-        radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)
-      \`,
-      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
-    }}
-  />
-   {/* Your Content/Components */}
-</div>`,
-  },
-  {
-  id: "radial-teal-glow",
-  name: "Teal Glow",
-  badge: "New",
-  category: "decorative",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
-      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 100%)
-    `,
-    backgroundSize: "100% 100%",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Teal Glow Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 100%)
-      \`,
-      backgroundSize: "100% 100%",
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-{
-  id: "radial-pink-glow",
-  name: "Pink Glow",
-  badge: "New",
-  category: "decorative",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
-      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
-    `,
-    backgroundSize: "100% 100%",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Pink Glow Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
-      \`,
-      backgroundSize: "100% 100%",
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-{
-  id: "radial-amber-glow",
-  name: "Amber Glow",
-  badge: "New",
-  category: "decorative",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
-      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)
-    `,
-    backgroundSize: "100% 100%",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Amber Glow Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)
-      \`,
-      backgroundSize: "100% 100%",
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-{
-  id: "radial-emerald-glow",
-  name: "Emerald Glow",
-  badge: "New",
-  category: "decorative",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
-      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)
-    `,
-    backgroundSize: "100% 100%",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Emerald Glow Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)
-      \`,
-      backgroundSize: "100% 100%",
-    }}
-  />
-  {/* Your Content/Components */}
-</div>`,
-},
-
-
-  {
-    id: "purple-gradient-grid-left",
-    name: "Purple Gradient Grid Left",
-    badge: "New",
-    category: "geometric",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-      radial-gradient(circle 800px at 0% 200px, #d5c5ff, transparent)
-    `,
-      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
-    },
-    code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Purple Gradient Grid Left Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-        radial-gradient(circle 800px at 0% 200px, #d5c5ff, transparent)
-      \`,
-      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
-    }}
-  />
-     {/* Your Content/Components */}
-</div>`,
-  },
   {
     id: "top-gradient-radial",
     name: "Top Gradient Radial",
@@ -233,6 +36,339 @@ export const gridPatterns: Pattern[] = [
     className="absolute inset-0 z-0"
     style={{
       background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+    {
+    id: "bottom-violet-radial",
+    name: "Bottom Violet Radial",
+    category: "decorative",
+    badge: "New",
+    description: "Rich violet from bottom - luxury feel for premium brands",
+    style: {
+      background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #7c3aed 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background from Bottom */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #7c3aed 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "bottom-slate-radial",
+    name: "Bottom Slate Radial",
+    category: "decorative",
+    badge: "New",
+    description: "Sophisticated slate from bottom - clean and professional",
+    style: {
+      background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #475569 100%)",
+    },
+    code: `<div className="min-h-screen w-full relative">
+  {/* Radial Gradient Background from Bottom */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #475569 100%)",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "radial-teal-glow",
+    name: "Teal Glow",
+    badge: "New",
+    category: "decorative",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 100%)
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Teal Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #14b8a6 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "radial-pink-glow",
+    name: "Pink Glow",
+    badge: "New",
+    category: "decorative",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Pink Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "radial-amber-glow",
+    name: "Amber Glow",
+    badge: "New",
+    category: "decorative",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Amber Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "radial-emerald-glow",
+    name: "Emerald Glow",
+    badge: "New",
+    category: "decorative",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Emerald Glow Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)
+      \`,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "purple-gradient-grid-right",
+    name: "Purple Gradient Grid Right",
+    badge: "New",
+    category: "geometric",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+      radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)
+    `,
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Purple Gradient Grid Right Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+        radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)
+      \`,
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
+    }}
+  />
+   {/* Your Content/Components */}
+</div>`,
+  },
+
+  {
+    id: "purple-gradient-grid-left",
+    name: "Purple Gradient Grid Left",
+    badge: "New",
+    category: "geometric",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+      radial-gradient(circle 800px at 0% 200px, #d5c5ff, transparent)
+    `,
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Purple Gradient Grid Left Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+        radial-gradient(circle 800px at 0% 200px, #d5c5ff, transparent)
+      \`,
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dual-gradient-overlay-strong",
+    badge: "New",
+    category: "geometric",
+    name: "Dual Gradient Overlay",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+      radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
+      radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
+    `,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Dual Gradient Overlay Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+        radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
+        radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
+      \`,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dual-gradient-overlay-strong-swapped",
+    name: "Dual Gradient Overlay Swapped",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+      radial-gradient(circle 500px at 20% 20%, rgba(139,92,246,0.3), transparent),
+      radial-gradient(circle 500px at 80% 80%, rgba(59,130,246,0.3), transparent)
+    `,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Dual Gradient Overlay Swapped Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+        radial-gradient(circle 500px at 20% 20%, rgba(139,92,246,0.3), transparent),
+        radial-gradient(circle 500px at 80% 80%, rgba(59,130,246,0.3), transparent)
+      \`,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dual-gradient-overlay-top",
+    name: "Dual Gradient Overlay (Top)",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+      radial-gradient(circle 500px at 0% 20%, rgba(139,92,246,0.3), transparent),
+      radial-gradient(circle 500px at 100% 0%, rgba(59,130,246,0.3), transparent)
+    `,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Dual Gradient Overlay (Top) Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+        radial-gradient(circle 500px at 0% 20%, rgba(139,92,246,0.3), transparent),
+        radial-gradient(circle 500px at 100% 0%, rgba(59,130,246,0.3), transparent)
+      \`,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    }}
+  />
+     {/* Your Content/Components */}
+</div>`,
+  },
+  {
+    id: "dual-gradient-overlay-bottom",
+    name: "Dual Gradient Overlay (Bottom)",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+      radial-gradient(circle 500px at 20% 100%, rgba(139,92,246,0.3), transparent),
+      radial-gradient(circle 500px at 100% 80%, rgba(59,130,246,0.3), transparent)
+    `,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Dual Gradient Overlay (Bottom) Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+        radial-gradient(circle 500px at 20% 100%, rgba(139,92,246,0.3), transparent),
+        radial-gradient(circle 500px at 100% 80%, rgba(59,130,246,0.3), transparent)
+      \`,
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
     }}
   />
      {/* Your Content/Components */}
@@ -376,134 +512,6 @@ export const gridPatterns: Pattern[] = [
         "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
       maskImage:
         "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
-    }}
-  />
-     {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "dual-gradient-overlay-strong",
-    badge: "New",
-    category: "gradients",
-    name: "Dual Gradient Overlay",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-      radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
-      radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
-    `,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    },
-    code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Dual Gradient Overlay Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-        radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
-        radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
-      \`,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    }}
-  />
-     {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "dual-gradient-overlay-strong-swapped",
-    name: "Dual Gradient Overlay Swapped",
-    category: "gradients",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-      radial-gradient(circle 500px at 20% 20%, rgba(139,92,246,0.3), transparent),
-      radial-gradient(circle 500px at 80% 80%, rgba(59,130,246,0.3), transparent)
-    `,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    },
-    code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Dual Gradient Overlay Swapped Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-        radial-gradient(circle 500px at 20% 20%, rgba(139,92,246,0.3), transparent),
-        radial-gradient(circle 500px at 80% 80%, rgba(59,130,246,0.3), transparent)
-      \`,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    }}
-  />
-     {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "dual-gradient-overlay-top",
-    name: "Dual Gradient Overlay (Top)",
-    category: "gradients",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-      radial-gradient(circle 500px at 0% 20%, rgba(139,92,246,0.3), transparent),
-      radial-gradient(circle 500px at 100% 0%, rgba(59,130,246,0.3), transparent)
-    `,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    },
-    code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Dual Gradient Overlay (Top) Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-        radial-gradient(circle 500px at 0% 20%, rgba(139,92,246,0.3), transparent),
-        radial-gradient(circle 500px at 100% 0%, rgba(59,130,246,0.3), transparent)
-      \`,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    }}
-  />
-     {/* Your Content/Components */}
-</div>`,
-  },
-  {
-    id: "dual-gradient-overlay-bottom",
-    name: "Dual Gradient Overlay (Bottom)",
-    category: "gradients",
-    badge: "New",
-    style: {
-      background: "#ffffff",
-      backgroundImage: `
-      linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-      radial-gradient(circle 500px at 20% 100%, rgba(139,92,246,0.3), transparent),
-      radial-gradient(circle 500px at 100% 80%, rgba(59,130,246,0.3), transparent)
-    `,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    },
-    code: `<div className="min-h-screen w-full bg-white relative">
-  {/* Dual Gradient Overlay (Bottom) Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-        radial-gradient(circle 500px at 20% 100%, rgba(139,92,246,0.3), transparent),
-        radial-gradient(circle 500px at 100% 80%, rgba(59,130,246,0.3), transparent)
-      \`,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
     }}
   />
      {/* Your Content/Components */}
