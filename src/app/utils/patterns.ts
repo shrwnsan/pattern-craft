@@ -1807,6 +1807,35 @@ export const gridPatterns: Pattern[] = [
      {/* Your Content/Components */}
 </div>`,
   },
+  {
+    id: "diagonal-green-glow",
+    name: "Diagonal Grid - Green Glow",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0f0f0f",
+      backgroundImage: `
+        repeating-linear-gradient(45deg, rgba(0, 255, 128, 0.1) 0, rgba(0, 255, 128, 0.1) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(0, 255, 128, 0.1) 0, rgba(0, 255, 128, 0.1) 1px, transparent 1px, transparent 20px)
+      `,
+      backgroundSize: "40px 40px",
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
+    {/* Diagonal Grid with Green Glow */}
+    <div
+      className="absolute inset-0 z-0 pointer-events-none"
+      style={{
+        backgroundImage: \`
+          repeating-linear-gradient(45deg, rgba(0, 255, 128, 0.1) 0, rgba(0, 255, 128, 0.1) 1px, transparent 1px, transparent 20px),
+          repeating-linear-gradient(-45deg, rgba(0, 255, 128, 0.1) 0, rgba(0, 255, 128, 0.1) 1px, transparent 1px, transparent 20px)
+        \`,
+        backgroundSize: "40px 40px",
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  }
+,  
   // New Ellipse Glow Pattern
   {
     id: "aurora-midnight-glow",
