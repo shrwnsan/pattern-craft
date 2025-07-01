@@ -6,7 +6,7 @@ import { Toaster } from "sonner";
 import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://patterncraft.megh.me"),
+  metadataBase: new URL("https://patterncraft.fun"),
   title: "PatternCraft - Modern Background Patterns & Gradients",
   description:
     "Professional-grade background patterns and gradients for your websites and apps. Easily copy and paste into your next project. Crafted with modern CSS and Tailwind for seamless integration.",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "PatternCraft - Modern Background Patterns & Gradients",
     description:
       "Explore a collection of handcrafted background patterns and gradients for modern websites. Easy to use and customize.",
-    url: "https://patterncraft.megh.me",
+    url: "https://patterncraft.fun",
     siteName: "Pattern Craft",
     type: "website",
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     creator: "@meghtrix",
   },
   alternates: {
-    canonical: "https://patterncraft.megh.me",
+    canonical: "https://patterncraft.fun",
   },
 };
 
