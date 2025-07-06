@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     "theme-color": "#000000",
     
     // Additional meta tags for better discovery
-    "google-site-verification": "xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy",
+    "google": "xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy",
 
     // Rich snippets hints
     "article:author": "Megh Bari",
