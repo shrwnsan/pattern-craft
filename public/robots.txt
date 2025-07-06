@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://patterncraft.megh.me
+Host: https://patterncraft.fun
 
 # Sitemaps
-Sitemap: https://patterncraft.megh.me/sitemap.xml
+Sitemap: https://patterncraft.fun/sitemap.xml
