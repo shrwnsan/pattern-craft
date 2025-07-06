@@ -10,8 +10,65 @@ export const metadata: Metadata = {
   title: "PatternCraft - Modern Background Patterns & Gradients",
   description:
     "Professional-grade background patterns and gradients for your websites and apps. Easily copy and paste into your next project. Crafted with modern CSS and Tailwind for seamless integration.",
-  keywords:
-    "background patterns, background snippets, gradients, Tailwind CSS, modern CSS, web design, UI background, CSS snippets, frontend resources, front-end snippets, backgrounds, patterns, CSS patterns, website backgrounds, modern UI, web design assets",
+  keywords: [
+    // Primary keywords
+    "css background patterns",
+    "background patterns generator",
+    "beautiful backgrounds",
+    "css gradients",
+    "background snippets",
+    "web backgrounds",
+    "gradients", "css snippets", "backgrounds", "modern ui",
+
+    // Secondary keywords
+    "tailwind css backgrounds",
+    "modern css patterns",
+    "ui background patterns",
+    "website background generator",
+    "css background snippets",
+    "gradient generator",
+    "pattern generator", "frontend resources",
+
+    // Long-tail keywords
+    "free css background patterns",
+    "beautiful website backgrounds",
+    "modern background patterns",
+    "copy paste css backgrounds",
+    "responsive background patterns",
+    "css pattern library",
+    "web design backgrounds", "front-end snippets",
+
+    // Tool-specific keywords
+    "tailwind background patterns",
+    "css grid patterns",
+    "geometric patterns css",
+    "abstract background patterns",
+    "frontend background resources",
+    "developer background tools", "web design assets",
+
+    // Trending keywords
+    "background patterns 2024",
+    "modern web backgrounds",
+    "css background effects",
+    "animated background patterns",
+    "minimalist background patterns"
+  ].join(", "),
+
+  authors: [{ name: "Megh Bari", url: "https://github.com/megh-bari" }],
+  creator: "Megh Bari",
+  publisher: "PatternCraft",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
   },
@@ -42,6 +99,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://patterncraft.fun",
   },
+   
+  // Additional SEO enhancements
+  category: "Web Development Tools",
+
+   // Schema.org structured data hints
+  other: {
+    "application-name": "PatternCraft",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "PatternCraft",
+    "msapplication-TileColor": "#000000",
+    "theme-color": "#000000",
+    
+    // Additional meta tags for better discovery
+    "google-site-verification": "xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy",
+
+    // Rich snippets hints
+    "article:author": "Megh Bari",
+    "article:publisher": "https://github.com/megh-bari",
+    "og:updated_time": new Date().toISOString(),
+  },
+  
 };
 
 export default function RootLayout({
