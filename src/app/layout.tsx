@@ -99,11 +99,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://patterncraft.fun",
   },
-   
+
   // Additional SEO enhancements
   category: "Web Development Tools",
 
-   // Schema.org structured data hints
+  verification: {
+    google: "xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy",
+  },
+
+  // Schema.org structured data hints
   other: {
     "application-name": "PatternCraft",
     "mobile-web-app-capable": "yes",
@@ -112,16 +116,13 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-title": "PatternCraft",
     "msapplication-TileColor": "#000000",
     "theme-color": "#000000",
-    
-    // Additional meta tags for better discovery
-    "google": "xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy",
 
     // Rich snippets hints
     "article:author": "Megh Bari",
     "article:publisher": "https://github.com/megh-bari",
     "og:updated_time": new Date().toISOString(),
   },
-  
+
 };
 
 export default function RootLayout({
