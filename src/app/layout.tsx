@@ -103,10 +103,6 @@ export const metadata: Metadata = {
   // Additional SEO enhancements
   category: "Web Development Tools",
 
-  verification: {
-    google: "xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy",
-  },
-
   // Schema.org structured data hints
   other: {
     "application-name": "PatternCraft",
@@ -132,6 +128,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="xeqxMvzZZQWV43nn06hJDnwUVVaRfYRaMrYHy-5qSCg" />
+      </head>
       <body
         className={`${GeistSans.className} bg-background text-foreground antialiased min-h-screen flex items-center justify-center`}
       >
