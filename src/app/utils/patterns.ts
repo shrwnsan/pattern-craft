@@ -3138,7 +3138,7 @@ export const gridPatterns: Pattern[] = [
       `,
     },
     code: `<div className="min-h-screen w-full bg-black relative">
-    {/* Morning Haze */}
+    {/* Midnight Mist */}
     <div
       className="absolute inset-0 z-0"
       style={{
