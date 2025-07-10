@@ -3096,4 +3096,60 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
+  {
+    id: "morning-haze",
+    name: "Morning Haze",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
+        radial-gradient(circle at 50% 100%, rgba(253, 224, 71, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.4) 0%, transparent 70%),
+        radial-gradient(circle at 50% 100%, rgba(244, 114, 182, 0.5) 0%, transparent 80%)
+      `,
+    },
+    code: `<div className="min-h-screen w-full bg-white relative">
+    {/* Morning Haze */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: \`
+          radial-gradient(circle at 50% 100%, rgba(253, 224, 71, 0.4) 0%, transparent 60%),
+          radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.4) 0%, transparent 70%),
+          radial-gradient(circle at 50% 100%, rgba(244, 114, 182, 0.5) 0%, transparent 80%)
+        \`,
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "midnight-mist",
+    name: "Midnight Mist",
+    category: "effects",
+    badge: "New",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+        radial-gradient(circle at 50% 100%, rgba(70, 85, 110, 0.5) 0%, transparent 60%),
+        radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.4) 0%, transparent 70%),
+        radial-gradient(circle at 50% 100%, rgba(181, 184, 208, 0.3) 0%, transparent 80%)
+      `,
+    },
+    code: `<div className="min-h-screen w-full bg-black relative">
+    {/* Midnight Mist */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: \`
+          radial-gradient(circle at 50% 100%, rgba(70, 85, 110, 0.5) 0%, transparent 60%),
+          radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.4) 0%, transparent 70%),
+          radial-gradient(circle at 50% 100%, rgba(181, 184, 208, 0.3) 0%, transparent 80%)
+        \`,
+      }}
+    />
+    {/* Your Content/Components */}
+  </div>`,
+  },
 ];
