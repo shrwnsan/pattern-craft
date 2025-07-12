@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { Check, Copy, Eye, Sparkles } from "lucide-react";
+import { Check, Copy, Eye, Palette, Sparkles, Star } from "lucide-react";
 import { gridPatterns } from "../utils/patterns";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
@@ -20,9 +20,32 @@ export default function PatternShowcase({
   theme,
 }: PatternShowcaseProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [favourite, setFavourite] = useState<string[]>([]);
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("all");
   const isPatternDark = theme === "dark";
+
+
+  // Load favourite on mount
+  useEffect(() => {
+    const stored = localStorage.getItem("favourite");
+    if (stored) setFavourite(JSON.parse(stored));
+  }, [])
+
+  // save favourite to localstorage
+
+  useEffect(() => {
+    localStorage.setItem("favourite", JSON.stringify(favourite));
+  }, [favourite])
+
+
+  const toggleFavourite = (id: string) => {
+    setFavourite((prev) =>
+      prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
+    );
+  };
+
+
 
   // Patterns Categories
 
@@ -32,6 +55,7 @@ export default function PatternShowcase({
     { id: "geometric", label: "Geometric" },
     { id: "decorative", label: "Decorative" },
     { id: "effects", label: "Effects" },
+    { id: "favourites", label: "Favourites" }
   ];
 
   // filter patterns based on categories
@@ -39,7 +63,9 @@ export default function PatternShowcase({
   const filteredPatterns =
     activeTab === "all"
       ? gridPatterns
-      : gridPatterns.filter((pattern) => pattern.category === activeTab);
+      : activeTab === "favourites"
+        ? gridPatterns.filter((pattern) => favourite.includes(pattern.id))
+        : gridPatterns.filter((pattern) => pattern.category === activeTab);
 
   const copyToClipboard = async (code: string, id: string) => {
     try {
@@ -96,7 +122,7 @@ export default function PatternShowcase({
         <TabsList
           className={`
     hidden sm:grid
-    grid-cols-2 sm:grid-cols-3 md:grid-cols-5
+    grid-cols-2 sm:grid-cols-3 md:grid-cols-6
     w-full h-auto p-1.5
     backdrop-blur-md shadow-lg border
     rounded-xl mb-8 transition-all duration-300
@@ -207,15 +233,39 @@ export default function PatternShowcase({
               {filteredPatterns.map((pattern) => (
                 <div key={pattern.id} className="group relative">
                   <div
-                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
-                        ? "ring-2 ring-primary ring-offset-2"
-                        : ""
+                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden shadow-sm transition-all duration-300 ${activePattern === pattern.id
+                      ? "ring-2 ring-primary ring-offset-2"
+                      : ""
                       } ${activeMobileCard === pattern.id
                         ? "scale-[1.02] shadow-lg sm:scale-100"
                         : "hover:shadow-lg hover:scale-[1.02]"
                       }`}
                     onClick={() => handleCardInteraction(pattern.id)}
                   >
+                    {/* Favorite Button with Star Icon */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleFavourite(pattern.id);
+                      }}
+                      className={`absolute top-2 left-2 z-10 p-2 rounded-full backdrop-blur-md shadow-lg border transition-all cursor-pointer duration-200 hover:scale-110 group/star ${favourite.includes(pattern.id)
+                        ? isPatternDark
+                          ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
+                          : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
+                        : isPatternDark
+                          ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
+                          : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
+                        }`}
+                      title={favourite.includes(pattern.id) ? "Remove from favorites" : "Add to favorites"}
+                    >
+                      <Star
+                        className={`h-4 w-4 transition-all duration-200 ${favourite.includes(pattern.id)
+                          ? "fill-current scale-110"
+                          : "group-hover/star:scale-110"
+                          }`}
+                      />
+                    </button>
+
                     {/* Pattern style */}
                     <div className="absolute inset-0" style={pattern.style} />
 
@@ -254,8 +304,8 @@ export default function PatternShowcase({
                           copyToClipboard(pattern.code, pattern.id);
                         }}
                         className={`flex-1 border-0 text-xs h-8 ${copiedId === pattern.id
-                            ? "bg-gray-700 hover:bg-gray-800 text-white"
-                            : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                          ? "bg-gray-700 hover:bg-gray-800 text-white"
+                          : "bg-gray-900/90 hover:bg-gray-900 text-white"
                           }`}
                         disabled={copiedId === pattern.id}
                       >
@@ -300,8 +350,8 @@ export default function PatternShowcase({
                               copyToClipboard(pattern.code, pattern.id);
                             }}
                             className={`cursor-pointer shadow-xl backdrop-blur-md gap-1 border-0 transition-all duration-200 hover:scale-105 text-xs sm:text-sm px-3 py-2 h-auto w-full xs:w-auto ${copiedId === pattern.id
-                                ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
-                                : "bg-gray-900/90 hover:bg-gray-900 text-white"
+                              ? "bg-gray-700 hover:bg-gray-800 text-white border border-gray-500"
+                              : "bg-gray-900/90 hover:bg-gray-900 text-white"
                               }`}
                             disabled={copiedId === pattern.id}
                           >
@@ -328,15 +378,35 @@ export default function PatternShowcase({
             {/* Empty state */}
             {filteredPatterns.length === 0 && (
               <div className="text-center py-12">
-                <div className="text-6xl mb-4">🎨</div>
-                <h3 className="text-lg font-semibold mb-2">
-                  No patterns found
-                </h3>
-                <p className="text-muted-foreground">
-                  No patterns available in this category yet.
-                </p>
+                {activeTab === "favourites" ? (
+                  <>
+                    <div className="text-6xl mb-4 text-yellow-400 flex justify-center">
+                      <Star className="h-12 w-12" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2">
+                      No favourites yet
+                    </h3>
+                    <p className="text-muted-foreground">
+                      You haven&apos;t saved any favorites yet. Tap the <Star className="inline -mt-1 h-4 w-4 text-yellow-400" /> icon on a pattern to add it to your favorites!
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    {/* palette */}
+                    <div className="text-6xl mb-4 text-purple-400 flex justify-center">
+                      <Palette className="h-12 w-12" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2">
+                      No patterns found
+                    </h3>
+                    <p className="text-muted-foreground">
+                      No patterns available in this category yet.
+                    </p>
+                  </>
+                )}
               </div>
             )}
+
           </TabsContent>
         ))}
       </Tabs>
