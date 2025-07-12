@@ -1,11 +1,27 @@
 # Pattern Craft
 
+<div align="center">
+  <img src="./public/images/readme-banner.png" alt="Pattern Craft Banner" width="800" />
+</div>
+
 Professional-grade background patterns and gradients for modern web applications. A curated collection of CSS patterns that you can copy and integrate into your projects instantly.
 
-**Visit**: **[Pattern Craft](https://patterncraft.megh.me)**
+<div style="height: 20px;"></div>
+<p align="center">
+    <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars">
+    <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks">
+    <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License">
+</p>
+<div style="height: 20px;"></div>
+
+> _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
+> [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
+
+## Visit: **[Pattern Craft](https://patterncraft.megh.me)**
 
 ![UI Image](./public/images/one.png)
 ![UI Image](./public/images/two.png)
+
 
 ## Features
 
@@ -15,6 +31,9 @@ Professional-grade background patterns and gradients for modern web applications
 - **Responsive patterns** - Optimized for all screen sizes
 - **Zero dependencies** - Pure CSS implementations
 - **Pattern categories** - Organized collection for easy browsing
+- **Return back to scroll** - Smooth navigation experience
+- **Add to favorites** - Save your preferred patterns
+- **Customizable snippets** - Easily modify patterns to fit your needs
 
 ## Tech Stack
 
@@ -70,7 +89,7 @@ npm start
 
 ## How to Use This
 
-1. Visit the live site: **[https://pattern-craft.vercel.app/](https://pattern-craft.vercel.app/)**
+1. Visit the live site: **[https://patterncraft.fun](https://pattern-craft.vercel.app/)**
 2. Browse through the collection of background patterns and gradients.
 3. Click on any pattern to open its preview modal.
 4. Copy the CSS/Tailwind-compatible code snippet.
@@ -87,12 +106,68 @@ These snippets work great for:
 
 [Watch the demo video](https://github.com/user-attachments/assets/c283ecbc-8732-412b-adab-5c17d1a390cc)
 
+
+## Customization
+
+### Manual Pattern Customization
+
+You can easily customize any background pattern by modifying the pattern object structure. Each pattern follows this format:
+
+```typescript
+{
+  id: "unique-pattern-id",
+  name: "Pattern Display Name",
+  badge: "New",
+  style: {
+    background: "#ffffff",
+    backgroundImage: `
+      // Your CSS background patterns here
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+      radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)
+    `,
+    backgroundSize: "96px 64px, 100% 100%",
+  },
+  code: `<div className="min-h-screen w-full bg-white relative">
+  {/* Pattern Name Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        // Your background image styles
+      \`,
+      backgroundSize: "96px 64px, 100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>`,
+}
+```
+
+### Customization Tips
+
+**Colors**: Change hex values in `backgroundImage` gradients
+**Sizing**: Modify `backgroundSize` values for different scales
+**Positioning**: Adjust gradient positions and directions
+**Effects**: Add multiple background layers for complex patterns
+
+### Example Customization
+
+```typescript
+// Original pattern
+backgroundImage: `linear-gradient(to right, #f0f0f0 1px, transparent 1px)`;
+
+// Customized version
+backgroundImage: `linear-gradient(to right, #3b82f6 1px, transparent 1px)`; // Blue lines
+backgroundSize: "48px 32px"; // Smaller grid
+```
+
 ## Usage
 
 1. Browse the pattern collection on the website
 2. Click on any pattern to see the live preview
-3. Copy the generated CSS code
-4. Paste it into your project
+3. Use the "Add to Favorites" feature to save patterns you like
+4. Copy the generated CSS code
+5. Paste it into your project
 
 Each pattern includes:
 
@@ -160,11 +235,10 @@ git checkout -b feature/new-pattern-name
 
 Consider these categories when adding patterns:
 
-- **Geometric** - Grids, dots, lines, shapes
 - **Gradient** - Color transitions and blends
-- **Texture** - Subtle background textures
-- **Abstract** - Creative and artistic patterns
-- **Minimal** - Clean and simple designs
+- **Geometric** - Grids, dots, lines, shapes
+- **Decorative** - Subtle background textures
+- **Effects** - Clean and simple designs
 
 ### Testing Your Patterns
 
@@ -247,4 +321,4 @@ If you like this project, consider giving it a ⭐️ on GitHub and sharing it w
 
 ---
 
-## **Happy coding!**
+>_**Happy coding!**_

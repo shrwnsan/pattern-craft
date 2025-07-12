@@ -317,6 +317,7 @@ export default function RootLayout({
             })
           }}
         />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
         className={`${GeistSans.className} bg-background text-foreground antialiased min-h-screen flex items-center justify-center`}
