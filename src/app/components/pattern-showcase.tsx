@@ -55,7 +55,7 @@ export default function PatternShowcase({
     { id: "geometric", label: "Geometric" },
     { id: "decorative", label: "Decorative" },
     { id: "effects", label: "Effects" },
-    { id: "favourites", label: "Saved ⭐" }
+    { id: "favourites", label: "Favourites" }
   ];
 
   // filter patterns based on categories
@@ -233,7 +233,7 @@ export default function PatternShowcase({
               {filteredPatterns.map((pattern) => (
                 <div key={pattern.id} className="group relative">
                   <div
-                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
+                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden shadow-sm transition-all duration-300 ${activePattern === pattern.id
                       ? "ring-2 ring-primary ring-offset-2"
                       : ""
                       } ${activeMobileCard === pattern.id
@@ -253,8 +253,8 @@ export default function PatternShowcase({
                           ? "bg-yellow-500/20 border-yellow-400/30 text-yellow-400"
                           : "bg-yellow-500/20 border-yellow-500/30 text-yellow-600"
                         : isPatternDark
-                          ? "bg-black/20 border-white/20 text-white hover:bg-black/30"
-                          : "bg-white/20 border-gray-200/30 text-gray-600 hover:bg-white/30"
+                          ? "bg-black/20 border-white/20 text-white hover:bg-black/30 hover:border-white/30"
+                          : "bg-black/20 border-white/30 text-white hover:bg-black/30 hover:border-white/40"
                         }`}
                       title={favourite.includes(pattern.id) ? "Remove from favorites" : "Add to favorites"}
                     >
@@ -387,7 +387,7 @@ export default function PatternShowcase({
                       No favourites yet
                     </h3>
                     <p className="text-muted-foreground">
-                      You haven&apos;t saved any patterns. Tap the <Star className="inline -mt-1 h-4 w-4 text-yellow-400" /> icon on a pattern to add it to your favorites!
+                      You haven&apos;t saved any favorites yet. Tap the <Star className="inline -mt-1 h-4 w-4 text-yellow-400" /> icon on a pattern to add it to your favorites!
                     </p>
                   </>
                 ) : (
