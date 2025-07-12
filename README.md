@@ -1,8 +1,5 @@
-# Pattern Craft
-
-<div align="center">
-  <img src="./public/images/readme-banner.png" alt="Pattern Craft Banner" width="800" />
-</div>
+<!-- # Pattern Craft -->
+<img src="./public/images/readme-banner.png" alt="Pattern Craft Banner" />
 
 Professional-grade background patterns and gradients for modern web applications. A curated collection of CSS patterns that you can copy and integrate into your projects instantly.
 
@@ -12,16 +9,15 @@ Professional-grade background patterns and gradients for modern web applications
     <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks">
     <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License">
 </p>
-<div style="height: 20px;"></div>
-
-> _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
-> [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
+<!-- <div style="height: 20px;"></div> -->
 
 ## Visit: **[Pattern Craft](https://patterncraft.megh.me)**
 
 ![UI Image](./public/images/one.png)
 ![UI Image](./public/images/two.png)
 
+> _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
+> [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
 
 ## Features
 
