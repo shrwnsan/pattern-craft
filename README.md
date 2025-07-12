@@ -1,21 +1,32 @@
 <!-- # Pattern Craft -->
-<img src="./public/images/readme-banner.png" alt="Pattern Craft Banner" />
 
-Professional-grade background patterns and gradients for modern web applications. A curated collection of CSS patterns that you can copy and integrate into your projects instantly.
+> _**For developers, by a developer. Design that slaps⚡**_
 
-<div style="height: 20px;"></div>
-<div style="height: 20px;"></div>
-<p align="center">
-    <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars">
-    <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks">
-    <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License">
-</p>
-<!-- <div style="height: 20px;"></div> -->
+<div align="center">
+  <img src="./public/images/readme-banner.png" alt="Pattern Craft Banner" />
+  <br><br>
+  <p align="left">
+    <strong>Effortlessly enhance your websites and apps with 100+ modern CSS background patterns and gradient snippets.</strong>
+    Instantly copy and paste beautifully crafted, production-ready designs built with modern CSS and Tailwind CSS for seamless integration.<br>
+    </br>
+    <em>Ideal for developers and designers working with React, Next.js, Vue, Angular, or any modern frontend framework. Made for devs who appreciate great design.</em>
+    </br>
+  </p>
+  <br>
+  <p align="center">
+    <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars" />
+    <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks" />
+    <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License" />
+  </p>
+</div>
 
 ## Visit: **[Pattern Craft](https://patterncraft.megh.me)**
 
-![UI Image](./public/images/one.png)
-![UI Image](./public/images/two.png)
+![UI Image](./public/images/readme-img-one.png)
+![UI Image](./public/images/readme-img-two.png)
+![UI Image](./public/images/readme-img-four.png)
+![UI Image](./public/images/readme-img-three.png)
+
 
 > _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
 > [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
@@ -102,7 +113,6 @@ These snippets work great for:
 ## Demo
 
 [Watch the demo video](https://github.com/user-attachments/assets/c283ecbc-8732-412b-adab-5c17d1a390cc)
-
 
 ## Customization
 
@@ -318,4 +328,4 @@ If you like this project, consider giving it a ⭐️ on GitHub and sharing it w
 
 ---
 
->_**Happy coding!**_
+> _**Happy coding!**_
