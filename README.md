@@ -4,6 +4,7 @@
 Professional-grade background patterns and gradients for modern web applications. A curated collection of CSS patterns that you can copy and integrate into your projects instantly.
 
 <div style="height: 20px;"></div>
+<div style="height: 20px;"></div>
 <p align="center">
     <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars">
     <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks">
