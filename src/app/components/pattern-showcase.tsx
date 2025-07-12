@@ -233,7 +233,7 @@ export default function PatternShowcase({
               {filteredPatterns.map((pattern) => (
                 <div key={pattern.id} className="group relative">
                   <div
-                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden shadow-sm transition-all duration-300 ${activePattern === pattern.id
+                    className={`relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-background shadow-sm transition-all duration-300 ${activePattern === pattern.id
                       ? "ring-2 ring-primary ring-offset-2"
                       : ""
                       } ${activeMobileCard === pattern.id
