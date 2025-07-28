@@ -170,7 +170,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/banner.png",
+        url: "https://patterncraft.fun/banner.png",
         width: 1200,
         height: 630,
         alt: "Pattern Craft – Modern Background Patterns and Gradients Snippets",
@@ -182,7 +182,7 @@ export const metadata: Metadata = {
     title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "100+ curated CSS background patterns and gradients. Tailwind CSS ready, responsive, and free to use. Perfect for modern web design.",
-    images: ["/banner.png"],
+    images: ["https://patterncraft.fun/banner.png"],
     creator: "@meghtrix",
     site: "@meghtrix",
   },
