@@ -7,7 +7,7 @@ import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://patterncraft.fun"),
-  title: "Pattern Craft - Modern Background Patterns & Gradients",
+  title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
   description:
     "Create stunning websites with our curated collection of 100+ modern CSS background patterns and gradients for your websites and apps. Easily copy and paste into your next project. Crafted with modern CSS and Tailwind for seamless integration.",
   keywords: [
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Pattern Craft - Modern Background Patterns & Gradients",
+    title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "Explore a 100+ collection of handcrafted background patterns and gradients. Perfect for modern websites. Easy to use and customize.",
     url: "https://patterncraft.fun",
@@ -170,19 +170,19 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-banner.png",
+        url: "/banner.png",
         width: 1200,
         height: 630,
-        alt: "Pattern Craft – Modern Background Patterns and Gradients",
+        alt: "Pattern Craft – Modern Background Patterns and Gradients Snippets",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pattern Craft - Modern Background Patterns & Gradients",
+    title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "100+ curated CSS background patterns and gradients. Tailwind CSS ready, responsive, and free to use. Perfect for modern web design.",
-    images: ["/og-banner.png"],
+    images: ["/banner.png"],
     creator: "@meghtrix",
     site: "@meghtrix",
   },
