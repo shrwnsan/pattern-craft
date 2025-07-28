@@ -255,6 +255,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* og image */}
+        <meta property="og:image" content="https://patterncraft.fun/banner.png" />
+        <meta name="twitter:image" content="https://patterncraft.fun/banner.png" />
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
