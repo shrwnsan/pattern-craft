@@ -170,7 +170,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/banner.jpg",
+        url: "/banner-v2.png",
         width: 1200,
         height: 630,
         alt: "Pattern Craft – Modern Background Patterns and Gradients Snippets",
@@ -182,7 +182,7 @@ export const metadata: Metadata = {
     title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "100+ curated CSS background patterns and gradients. Tailwind CSS ready, responsive, and free to use. Perfect for modern web design.",
-    images: ["/banner.jpg"],
+    images: ["/banner-v2.png"],
     creator: "@meghtrix",
     site: "@meghtrix",
   },
@@ -256,8 +256,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* og image */}
-        <meta property="og:image" content="https://patterncraft.fun/banner.jpg" />
-        <meta name="twitter:image" content="https://patterncraft.fun/banner.jpg" />
+        <meta property="og:image" content="https://patterncraft.fun/banner-v2.png" />
+        <meta name="twitter:image" content="https://patterncraft.fun/banner-v2.png" />
 
         {/* JSON-LD Structured Data */}
         <script
