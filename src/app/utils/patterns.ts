@@ -1654,20 +1654,20 @@ export const gridPatterns: Pattern[] = [
   </div>`,
   },
   {
-  id: "zigzag-lightning-light",
-  name: "Zigzag Lightning - Light",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
+    id: "zigzag-lightning-light",
+    name: "Zigzag Lightning - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
       repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(75, 85, 99, 0.08) 20px, rgba(75, 85, 99, 0.08) 21px),
       repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(107, 114, 128, 0.06) 30px, rgba(107, 114, 128, 0.06) 31px),
       repeating-linear-gradient(60deg, transparent, transparent 40px, rgba(55, 65, 81, 0.05) 40px, rgba(55, 65, 81, 0.05) 41px),
       repeating-linear-gradient(150deg, transparent, transparent 35px, rgba(31, 41, 55, 0.04) 35px, rgba(31, 41, 55, 0.04) 36px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
   {/* Zigzag Lightning - Light Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -1682,23 +1682,23 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "circuit-board-light",
-  name: "Circuit Board - Light",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
+  },
+  {
+    id: "circuit-board-light",
+    name: "Circuit Board - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
       repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
       repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
       radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
       radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
     `,
-    backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
-  },
-  code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+      backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
   {/* Circuit Board - Light Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -1714,22 +1714,22 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "concentric-squares-light",
-  name: "Concentric Squares - Light",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
+  },
+  {
+    id: "concentric-squares-light",
+    name: "Concentric Squares - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
       repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
       repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),
       repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),
       repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
   {/* Concentric Squares - Light Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -1744,22 +1744,22 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "woven-fabric-light",
-  name: "Woven Fabric - Light",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
+  },
+  {
+    id: "woven-fabric-light",
+    name: "Woven Fabric - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
       repeating-linear-gradient(0deg, rgba(75, 85, 99, 0.08), rgba(75, 85, 99, 0.08) 2px, transparent 2px, transparent 6px),
       repeating-linear-gradient(90deg, rgba(107, 114, 128, 0.06), rgba(107, 114, 128, 0.06) 2px, transparent 2px, transparent 6px),
       repeating-linear-gradient(0deg, rgba(55, 65, 81, 0.04), rgba(55, 65, 81, 0.04) 1px, transparent 1px, transparent 12px),
       repeating-linear-gradient(90deg, rgba(55, 65, 81, 0.04), rgba(55, 65, 81, 0.04) 1px, transparent 1px, transparent 12px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
   {/* Woven Fabric - Light Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -1774,22 +1774,22 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "crosshatch-art-light",
-  name: "Crosshatch Art - Light",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#ffffff",
-    backgroundImage: `
+  },
+  {
+    id: "crosshatch-art-light",
+    name: "Crosshatch Art - Light",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backgroundImage: `
       repeating-linear-gradient(22.5deg, transparent, transparent 2px, rgba(75, 85, 99, 0.06) 2px, rgba(75, 85, 99, 0.06) 3px, transparent 3px, transparent 8px),
       repeating-linear-gradient(67.5deg, transparent, transparent 2px, rgba(107, 114, 128, 0.05) 2px, rgba(107, 114, 128, 0.05) 3px, transparent 3px, transparent 8px),
       repeating-linear-gradient(112.5deg, transparent, transparent 2px, rgba(55, 65, 81, 0.04) 2px, rgba(55, 65, 81, 0.04) 3px, transparent 3px, transparent 8px),
       repeating-linear-gradient(157.5deg, transparent, transparent 2px, rgba(31, 41, 55, 0.03) 2px, rgba(31, 41, 55, 0.03) 3px, transparent 3px, transparent 8px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
+    },
+    code: `<div className="min-h-screen w-full bg-white relative text-gray-800">
   {/* Crosshatch Art - Light Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -1804,7 +1804,7 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
+  },
   {
     id: "white-grid-with-dots",
     name: "White Grid with Dots",
@@ -2529,7 +2529,6 @@ export const gridPatterns: Pattern[] = [
     {/* Your Content/Components */}
   </div>`,
   },
-  
 
   {
     id: "gradient-left-diagonal-lines",
@@ -2651,7 +2650,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  
+
   {
     id: "variable-spacing",
     name: "Variable Spacing",
@@ -2694,7 +2693,7 @@ export const gridPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  
+
   {
     id: "circuit-board-vibes",
     name: "Circuit Board Vibes",
@@ -2744,20 +2743,20 @@ export const gridPatterns: Pattern[] = [
 </div>`,
   },
   {
-  id: "zigzag-lightning-dark",
-  name: "Zigzag Lightning - Dark",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#0f0f0f",
-    backgroundImage: `
+    id: "zigzag-lightning-dark",
+    name: "Zigzag Lightning - Dark",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0f0f0f",
+      backgroundImage: `
       repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(34, 197, 94, 0.12) 20px, rgba(34, 197, 94, 0.12) 21px),
       repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(16, 185, 129, 0.10) 30px, rgba(16, 185, 129, 0.10) 31px),
       repeating-linear-gradient(60deg, transparent, transparent 40px, rgba(59, 130, 246, 0.08) 40px, rgba(59, 130, 246, 0.08) 41px),
       repeating-linear-gradient(150deg, transparent, transparent 35px, rgba(147, 51, 234, 0.06) 35px, rgba(147, 51, 234, 0.06) 36px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
   {/* Zigzag Lightning - Dark Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -2772,23 +2771,23 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "circuit-board-dark",
-  name: "Circuit Board - Dark",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#0f0f0f",
-    backgroundImage: `
+  },
+  {
+    id: "circuit-board-dark",
+    name: "Circuit Board - Dark",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0f0f0f",
+      backgroundImage: `
       repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(34, 197, 94, 0.15) 19px, rgba(34, 197, 94, 0.15) 20px, transparent 20px, transparent 39px, rgba(34, 197, 94, 0.15) 39px, rgba(34, 197, 94, 0.15) 40px),
       repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(34, 197, 94, 0.15) 19px, rgba(34, 197, 94, 0.15) 20px, transparent 20px, transparent 39px, rgba(34, 197, 94, 0.15) 39px, rgba(34, 197, 94, 0.15) 40px),
       radial-gradient(circle at 20px 20px, rgba(16, 185, 129, 0.18) 2px, transparent 2px),
       radial-gradient(circle at 40px 40px, rgba(16, 185, 129, 0.18) 2px, transparent 2px)
     `,
-    backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
-  },
-  code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
+      backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
   {/* Circuit Board - Dark Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -2804,22 +2803,22 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "concentric-squares-dark",
-  name: "Concentric Squares - Dark",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#0f0f0f",
-    backgroundImage: `
+  },
+  {
+    id: "concentric-squares-dark",
+    name: "Concentric Squares - Dark",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0f0f0f",
+      backgroundImage: `
       repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(99, 102, 241, 0.15) 5px, rgba(99, 102, 241, 0.15) 6px, transparent 6px, transparent 15px),
       repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(99, 102, 241, 0.15) 5px, rgba(99, 102, 241, 0.15) 6px, transparent 6px, transparent 15px),
       repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(139, 92, 246, 0.12) 10px, rgba(139, 92, 246, 0.12) 11px, transparent 11px, transparent 30px),
       repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(139, 92, 246, 0.12) 10px, rgba(139, 92, 246, 0.12) 11px, transparent 11px, transparent 30px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
   {/* Concentric Squares - Dark Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -2834,22 +2833,22 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-{
-  id: "crosshatch-art-dark",
-  name: "Crosshatch Art - Dark",
-  category: "geometric",
-  badge: "New",
-  style: {
-    background: "#0f0f0f",
-    backgroundImage: `
+  },
+  {
+    id: "crosshatch-art-dark",
+    name: "Crosshatch Art - Dark",
+    category: "geometric",
+    badge: "New",
+    style: {
+      background: "#0f0f0f",
+      backgroundImage: `
       repeating-linear-gradient(22.5deg, transparent, transparent 2px, rgba(16, 185, 129, 0.18) 2px, rgba(16, 185, 129, 0.18) 3px, transparent 3px, transparent 8px),
       repeating-linear-gradient(67.5deg, transparent, transparent 2px, rgba(245, 101, 101, 0.10) 2px, rgba(245, 101, 101, 0.10) 3px, transparent 3px, transparent 8px),
       repeating-linear-gradient(112.5deg, transparent, transparent 2px, rgba(234, 179, 8, 0.08) 2px, rgba(234, 179, 8, 0.08) 3px, transparent 3px, transparent 8px),
       repeating-linear-gradient(157.5deg, transparent, transparent 2px, rgba(249, 115, 22, 0.06) 2px, rgba(249, 115, 22, 0.06) 3px, transparent 3px, transparent 8px)
     `,
-  },
-  code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
+    },
+    code: `<div className="min-h-screen w-full bg-[#0f0f0f] relative text-white">
   {/* Crosshatch Art - Dark Pattern */}
   <div
     className="absolute inset-0 z-0 pointer-events-none"
@@ -2864,8 +2863,7 @@ export const gridPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-},
-
+  },
 
   // New Ellipse Glow Pattern
   {
@@ -3173,6 +3171,38 @@ export const gridPatterns: Pattern[] = [
         \`,
       }}
     />
+    {/* Your Content/Components */}
+  </div>`,
+  },
+  {
+    id: "prismatic-aurora-burst",
+    name: "Prismatic Aurora Burst",
+    category: "gradients",
+    badge: "New",
+    style: {
+      background: `
+        radial-gradient(ellipse 120% 80% at 70% 20%, rgba(255, 20, 147, 0.15), transparent 50%),
+        radial-gradient(ellipse 100% 60% at 30% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+        radial-gradient(ellipse 90% 70% at 50% 0%, rgba(138, 43, 226, 0.18), transparent 65%),
+        radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+        #000000
+      `,
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+    {/* Prismatic Aurora Burst - Multi-layered Gradient */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: \`
+          radial-gradient(ellipse 120% 80% at 70% 20%, rgba(255, 20, 147, 0.15), transparent 50%),
+          radial-gradient(ellipse 100% 60% at 30% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+          radial-gradient(ellipse 90% 70% at 50% 0%, rgba(138, 43, 226, 0.18), transparent 65%),
+          radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+          #000000
+        \`,
+      }}
+    />
+  
     {/* Your Content/Components */}
   </div>`,
   },
