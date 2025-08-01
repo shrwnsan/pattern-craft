@@ -31,6 +31,13 @@
 > _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
 > [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
 
+## Pattern Craft in the Wild!!!
+
+Curious where Pattern Craft is getting featured, shared, talk about or appreciated?  
+Check out this growing list of shoutouts, showcases, and love from the community:  
+🧩 [**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
+
+
 ## Features
 
 - **Ready-to-use CSS code** - Copy and paste directly into your projects
