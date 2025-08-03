@@ -15,10 +15,24 @@
   <br>
   <p align="center">
     <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars" />
-    <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks" />
-    <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License" />
+<img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks" />
+<img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License" />
+<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
+    <img src="https://img.shields.io/badge/Sponsored%20by-Vercel-000000?style=social&logo=vercel&logoColor=white" alt="Sponsored by Vercel" />
+</a>
+    
   </p>
 </div>
+
+---
+
+>**This project is proudly sponsored by [Vercel](https://vercel.com?utm_source=patterncraft&utm_campaign=oss). Thank you for supporting open source!**
+
+  <p align="center">
+<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
+  <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="32">
+</a>
+</p>
 
 ## Visit: **[Pattern Craft](https://patterncraft.megh.me)**
 
@@ -26,7 +40,6 @@
 ![UI Image](./public/images/readme-img-two.png)
 ![UI Image](./public/images/readme-img-four.png)
 ![UI Image](./public/images/readme-img-three.png)
-
 
 > _**Note: This project does not provide plain HTML or vanilla CSS snippets. All code is optimized for JSX (React/Next.js) and Tailwind CSS.**_  
 > [Learn more in this announcement.](https://github.com/megh-bari/pattern-craft/discussions/24)
@@ -36,7 +49,6 @@
 Curious where Pattern Craft is getting featured, shared, talk about or appreciated?  
 Check out this growing list of shoutouts, showcases, and love from the community:  
 🧩 [**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
-
 
 ## Features
 
@@ -56,6 +68,19 @@ Check out this growing list of shoutouts, showcases, and love from the community
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
 - **Vercel** - Deployment and hosting
+
+
+## Sponsored by <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">Vercel⚡</a>
+
+**This project is proudly powered by <b>Vercel</b> — the platform behind PatternCraft’s blazing-fast deployment and seamless scalability.**<br>
+
+<i>Big thanks to Vercel for supporting open source and keeping this project running smoothly!</i>
+  <br><br>
+  <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
+    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
+  </a>
+</p>
+
 
 ## Getting Started
 
@@ -191,6 +216,8 @@ Each pattern includes:
 - Cross-browser compatibility
 
 ## Contributing
+
+>**This project is sponsored by Vercel, which helps us maintain a stable development environment.**
 
 We welcome contributions to expand the pattern collection. To add new patterns:
 
