@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import type React from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
@@ -463,8 +461,6 @@ export default function RootLayout({
         >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {children}
-            <Analytics />
-            <SpeedInsights />
           </div>
           <Toaster />
         </ThemeProvider>

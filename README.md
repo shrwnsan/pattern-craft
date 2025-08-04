@@ -54,9 +54,9 @@ Check out this growing list of shoutouts, showcases, and love from the community
 
 ## Tech Stack
 
-- **Next.js 14** - React framework with App Router
+- **Next.js 15** - React framework with App Router
 - **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first CSS framework
+- **Tailwind CSS v4** - Latest utility-first CSS framework
 - **GitHub Pages** - Deployment and hosting
 - **Playwright** - Automated testing and performance validation
 
@@ -72,7 +72,7 @@ Check out this growing list of shoutouts, showcases, and love from the community
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 18+ (tested with Node.js 22)
 - npm, yarn, pnpm, or bun
 
 ### Installation
@@ -270,7 +270,7 @@ We welcome contributions to expand the pattern collection. To add new patterns:
 git checkout -b feature/new-pattern-name
 ```
 
-3. Navigate to `src/app/utils/patterns.ts`
+3. Navigate to `src/app/utils/patterns/` directory
 4. Add your pattern following the established format:
 
 ```typescript
@@ -350,22 +350,22 @@ git push origin feature/new-pattern-name
 ```
 pattern-craft/
 ├── src/
-│   └── app/
-│       ├── components/
-│       │   ├── footer.tsx
-│       │   ├── hero.tsx
-│       │   ├── navbar.tsx
-│       │   ├── pattern-showcase.tsx
-│       │   └── theme-provider.tsx
-│       ├── types/
-│       │   └── pattern.ts
-│       ├── utils/
-│       │   ├── patterns.ts        # Pattern definitions (contribute here)
-│       ├── globals.css
-│       ├── layout.tsx
-│       └── page.tsx
-├── components/
-│   └── ui/                        # shadcn/ui components
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── footer.tsx
+│   │   │   ├── hero.tsx
+│   │   │   ├── navbar.tsx
+│   │   │   ├── pattern-showcase.tsx
+│   │   │   └── theme-provider.tsx
+│   │   ├── types/
+│   │   │   └── pattern.ts
+│   │   ├── utils/
+│   │   │   ├── patterns/          # Pattern definitions (contribute here)
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   └── components/
+│       └── ui/                    # shadcn/ui components
 ```
 
 ### Code Standards
