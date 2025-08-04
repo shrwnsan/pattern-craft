@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Code2, Copy, Eye, Github, Zap } from "lucide-react";
+import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
 
 interface HeroProps {
   activePattern?: string | null;
