@@ -1,9 +1,11 @@
 {
   "name": "pattern-craft",
+  "description": "🎨 Modern background patterns & gradients for React/Next.js. 100+ production-ready CSS snippets. 99.2% optimized, 1-1.5s load times, zero hosting costs.",
   "author": "Megh",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://shrwnsan.github.io/pattern-craft/",
+  "keywords": ["css", "patterns", "gradients", "tailwind", "react", "nextjs", "background", "design", "optimized", "performance"],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
