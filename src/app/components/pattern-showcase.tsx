@@ -5,19 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Check, Copy, Eye, Palette, Sparkles, Star } from "lucide-react";
-import { gridPatterns } from "../utils/patterns";
+import { Pattern } from "../types/pattern";
 import { useEffect, useState } from "react";
 
 interface PatternShowcaseProps {
   activePattern: string | null;
   setActivePattern: (pattern: string | null) => void;
   theme: "light" | "dark";
+  patterns: Pattern[];
 }
 
 export default function PatternShowcase({
   activePattern,
   setActivePattern,
   theme,
+  patterns,
 }: PatternShowcaseProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [favourite, setFavourite] = useState<string[]>([]);
@@ -59,13 +61,12 @@ export default function PatternShowcase({
   ];
 
   // filter patterns based on categories
-
   const filteredPatterns =
     activeTab === "all"
-      ? gridPatterns
+      ? patterns
       : activeTab === "favourites"
-        ? gridPatterns.filter((pattern) => favourite.includes(pattern.id))
-        : gridPatterns.filter((pattern) => pattern.category === activeTab);
+        ? patterns.filter((pattern) => favourite.includes(pattern.id))
+        : patterns.filter((pattern) => pattern.category === activeTab);
 
   const copyToClipboard = async (code: string, id: string) => {
     try {
