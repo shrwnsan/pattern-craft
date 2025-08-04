@@ -158,9 +158,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/pattern-craft/favicon.svg",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/pattern-craft/site.webmanifest",
   openGraph: {
     title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
@@ -170,7 +170,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-banner.png",
+        url: "/pattern-craft/og-banner.png",
         width: 1200,
         height: 630,
         alt: "Pattern Craft – Modern Background Patterns and Gradients Snippets",
@@ -182,7 +182,7 @@ export const metadata: Metadata = {
     title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "100+ curated CSS background patterns and gradients. Tailwind CSS ready, responsive, and free to use. Perfect for modern web design.",
-    images: ["/og-banner.png"],
+    images: ["/pattern-craft/og-banner.png"],
     creator: "@meghtrix",
     site: "@meghtrix",
   },
@@ -341,7 +341,7 @@ export default function RootLayout({
             })
           }}
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/pattern-craft/site.webmanifest" />
       </head>
       <body
         className={`${GeistSans.className} bg-background text-foreground antialiased min-h-screen flex items-center justify-center`}
