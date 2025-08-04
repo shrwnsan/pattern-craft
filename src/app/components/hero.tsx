@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Github, Copy, Eye, Code2, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Code2, Copy, Eye, Github, Zap } from "lucide-react";
 
 interface HeroProps {
   activePattern?: string | null;
@@ -20,7 +20,7 @@ export default function Hero({ theme }: HeroProps) {
   const isPatternDark = theme === "dark";
 
   return (
-    <section className="container py-8 sm:py-12 md:py-16 lg:py-18 text-center relative overflow-hidden px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <section className="container mx-auto py-8 sm:py-12 md:py-16 lg:py-18 text-center relative overflow-hidden px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <div className="mx-auto max-w-6xl relative z-10">
         {/* Badge */}
         <div className="mb-6 sm:mb-8 md:mb-10 flex justify-center">
