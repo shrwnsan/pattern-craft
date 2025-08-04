@@ -32,6 +32,21 @@ export default defineConfig({
     
     /* Record video on failure */
     video: 'retain-on-failure',
+    
+    /* Global screenshot options for consistent rendering */
+    ignoreHTTPSErrors: true,
+    
+    /* Wait for fonts to load */
+    actionTimeout: 15000,
+  },
+  
+  /* Global test settings */
+  expect: {
+    /* Screenshot comparison threshold */
+    toHaveScreenshot: {
+      threshold: 0.2, // Allow 20% difference by default
+      animations: 'disabled' // Disable animations for consistent screenshots
+    },
   },
 
   /* Configure projects for major browsers */

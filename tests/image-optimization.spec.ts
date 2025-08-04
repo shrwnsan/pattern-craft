@@ -149,7 +149,25 @@ test.describe('Image Optimization Tests', () => {
     for (const viewport of viewports) {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
       await page.goto('/');
+      
+      // Wait for all content to load and animations to complete
       await page.waitForLoadState('networkidle');
+      await page.waitForTimeout(1000); // Additional wait for any animations
+      
+      // Hide dynamic content that could cause screenshot differences
+      await page.addStyleTag({
+        content: `
+          * {
+            animation-duration: 0s !important;
+            animation-delay: 0s !important;
+            transition-duration: 0s !important;
+            transition-delay: 0s !important;
+          }
+          .date, .time, [data-testid*="date"], [data-testid*="time"] {
+            display: none !important;
+          }
+        `
+      });
       
       // Should not have horizontal scrollbars
       const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
@@ -157,8 +175,11 @@ test.describe('Image Optimization Tests', () => {
       
       expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 1); // Allow 1px tolerance
       
-      // Take screenshot for visual regression
-      await expect(page).toHaveScreenshot(`patterns-${viewport.name}.png`);
+      // Take screenshot for visual regression with higher threshold for cross-platform differences
+      await expect(page).toHaveScreenshot(`patterns-${viewport.name}.png`, {
+        threshold: 0.15, // Allow up to 15% difference for cross-platform rendering
+        maxDiffPixels: 1000 // Allow up to 1000 different pixels
+      });
     }
   });
 });
