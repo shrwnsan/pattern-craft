@@ -68,6 +68,7 @@ Check out this growing list of shoutouts, showcases, and love from the community
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
 - **Vercel** - Deployment and hosting
+- **Playwright** - Automated testing and performance validation
 
 
 ## Sponsored by <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">Vercel⚡</a>
@@ -126,6 +127,49 @@ pnpm dev
 npm run build
 npm start
 ```
+
+### Testing
+
+**Pattern Craft includes comprehensive automated testing with Playwright to ensure optimal performance and functionality.**
+
+#### Run Tests
+
+```bash
+# Run all tests
+npm test
+
+# Interactive UI mode (recommended for development)
+npm run test:ui
+
+# Run tests with browser visible (debugging)
+npm run test:headed
+
+# Run specific test suites
+npm run test:optimization      # Image optimization tests
+npm run test:performance       # Performance benchmarks
+
+# View detailed HTML report
+npm run test:report
+```
+
+#### Test Coverage
+
+- **Image Optimization**: Validates 99.2% file size reduction from optimization
+- **Performance Benchmarks**: Load times, Core Web Vitals, network usage
+- **Cross-Browser Testing**: Chrome, Firefox, Safari, mobile browsers
+- **SEO Validation**: Structured data and image accessibility
+- **Responsive Design**: Testing across mobile, tablet, desktop viewports
+- **Visual Regression**: Screenshot comparisons for UI consistency
+
+#### Expected Performance Metrics
+
+- ✅ Page load time under 3 seconds
+- ✅ Individual images under 100KB (vs original 3-10MB)
+- ✅ Total image payload under 2MB (vs original 109MB)
+- ✅ Lighthouse performance score 90+
+- ✅ No console errors across all browsers
+
+For detailed testing documentation, see [`docs/TESTING.md`](docs/TESTING.md).
 
 ## How to Use This
 
