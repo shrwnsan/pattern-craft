@@ -6,7 +6,8 @@ import Footer from "./components/footer";
 import PatternShowcase from "./components/pattern-showcase";
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "./components/theme-provider";
-import { gridPatterns } from "./utils/patterns";
+import { initializePatterns } from "./utils/patterns/index";
+import { Pattern } from "./types/pattern";
 import { Toaster } from "sonner";
 import SupportDropdown from "./components/SupportDropdownProps ";
 import ReturnToPreview from "./components/ReturnToPreview";
@@ -14,10 +15,26 @@ import ReturnToPreview from "./components/ReturnToPreview";
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [patterns, setPatterns] = useState<Pattern[]>([]);
+  const [patternsLoaded, setPatternsLoaded] = useState(false);
+
+  // Load patterns on component mount
+  useEffect(() => {
+    const loadPatterns = async () => {
+      try {
+        const loadedPatterns = await initializePatterns();
+        setPatterns(loadedPatterns);
+        setPatternsLoaded(true);
+      } catch (error) {
+        console.error('Failed to load patterns:', error);
+      }
+    };
+    loadPatterns();
+  }, []);
 
   // Find the active pattern object
   const activePatternObj = activePattern
-    ? gridPatterns.find((p) => p.id === activePattern)
+    ? patterns.find((p) => p.id === activePattern)
     : null;
 
   // Update theme based on pattern background color
@@ -55,11 +72,21 @@ export default function Home() {
               setActivePattern={setActivePattern}
               theme={theme}
             />
-            <PatternShowcase
-              activePattern={activePattern}
-              setActivePattern={setActivePattern}
-              theme={theme}
-            />
+            {patternsLoaded ? (
+              <PatternShowcase
+                activePattern={activePattern}
+                setActivePattern={setActivePattern}
+                theme={theme}
+                patterns={patterns}
+              />
+            ) : (
+              <div className="container pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
+                <div className="text-center py-20">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+                  <p className="text-gray-600">Loading patterns...</p>
+                </div>
+              </div>
+            )}
             <Footer theme={theme} />
           </div>
           <ReturnToPreview theme={theme}  />

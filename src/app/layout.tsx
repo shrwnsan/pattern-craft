@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import type React from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
@@ -8,7 +6,7 @@ import { Toaster } from "sonner";
 import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://patterncraft.fun"),
+  metadataBase: new URL("https://shrwnsan.github.io/pattern-craft/"),
   title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
   description:
     "Create stunning websites with our curated collection of 100+ modern CSS background patterns and gradients for your websites and apps. Easily copy and paste into your next project. Crafted with modern CSS and Tailwind for seamless integration.",
@@ -160,19 +158,19 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/pattern-craft/favicon.svg",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/pattern-craft/site.webmanifest",
   openGraph: {
     title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "Explore a 100+ collection of handcrafted background patterns and gradients. Perfect for modern websites. Easy to use and customize.",
-    url: "https://patterncraft.fun",
+    url: "https://shrwnsan.github.io/pattern-craft/",
     siteName: "Pattern Craft",
     type: "website",
     images: [
       {
-        url: "/og-banner.png",
+        url: "/pattern-craft/og-banner.png",
         width: 1200,
         height: 630,
         alt: "Pattern Craft – Modern Background Patterns and Gradients Snippets",
@@ -184,12 +182,12 @@ export const metadata: Metadata = {
     title: "Pattern Craft - Modern Background Patterns & Gradients Snippets",
     description:
       "100+ curated CSS background patterns and gradients. Tailwind CSS ready, responsive, and free to use. Perfect for modern web design.",
-    images: ["/og-banner.png"],
+    images: ["/pattern-craft/og-banner.png"],
     creator: "@meghtrix",
     site: "@meghtrix",
   },
   alternates: {
-    canonical: "https://patterncraft.fun",
+    canonical: "https://shrwnsan.github.io/pattern-craft/",
   },
 
   classification: "Web Development, CSS Tools, Design Resources",
@@ -258,8 +256,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* og image */}
-        <meta property="og:image" content="https://patterncraft.fun/og-banner.png" />
-        <meta name="twitter:image" content="https://patterncraft.fun/og-banner.png" />
+        <meta property="og:image" content="https://shrwnsan.github.io/pattern-craft/og-banner.png" />
+        <meta name="twitter:image" content="https://shrwnsan.github.io/pattern-craft/og-banner.png" />
 
         {/* <meta property="og:image" content="https://patterncraft.fun/opengraph-image.png" />
         <meta property="og:image:type" content="image/png" />
@@ -278,7 +276,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Pattern Craft",
-              "url": "https://patterncraft.fun/"
+              "url": "https://shrwnsan.github.io/pattern-craft/"
             })
           }}
         />
@@ -291,7 +289,7 @@ export default function RootLayout({
               "@type": "WebApplication",
               "name": "Pattern Craft",
               "description": "Modern CSS background patterns and gradients generator",
-              "url": "https://patterncraft.fun",
+              "url": "https://shrwnsan.github.io/pattern-craft/",
               "applicationCategory": "DeveloperApplication",
               "operatingSystem": "Web",
               "offers": {
@@ -308,121 +306,13 @@ export default function RootLayout({
               "publisher": {
                 "@type": "Organization",
                 "name": "PatternCraft",
-                "url": "https://patterncraft.fun"
+                "url": "https://shrwnsan.github.io/pattern-craft/"
               },
               "datePublished": "2024-01-01",
               "dateModified": new Date().toISOString(),
               "inLanguage": "en-US",
               "isAccessibleForFree": true,
               "keywords": "CSS, background patterns, gradients, web design, tailwind css",
-              "screenshot": [
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-1.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-2.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-3.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-4.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-5.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-6.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-7.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-8.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-9.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-10.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-11.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-12.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-13.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-14.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-15.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-16.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-17.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-18.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-19.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-20.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-                {
-                  "@type": "ImageObject",
-                  "contentUrl": "https://patterncraft.fun/snapshots/screenshot-21.png",
-                  "description": "Pattern Craft - Modern Background Patterns & Gradients Snippets"
-                },
-              ]
-              ,
               "softwareVersion": "2.0.0",
               "aggregateRating": {
                 "@type": "AggregateRating",
@@ -434,7 +324,7 @@ export default function RootLayout({
               "sameAs": [
                 "https://github.com/megh-bari",
                 "https://x.com/meghtrix",
-                "https://patterncraft.fun"
+                "https://shrwnsan.github.io/pattern-craft/"
               ],
               "featureList": [
                 "100+ CSS and Tailwind background patterns",
@@ -451,7 +341,7 @@ export default function RootLayout({
             })
           }}
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/pattern-craft/site.webmanifest" />
       </head>
       <body
         className={`${GeistSans.className} bg-background text-foreground antialiased min-h-screen flex items-center justify-center`}
@@ -463,8 +353,6 @@ export default function RootLayout({
         >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {children}
-            <Analytics />
-            <SpeedInsights />
           </div>
           <Toaster />
         </ThemeProvider>
