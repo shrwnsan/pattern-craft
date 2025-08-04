@@ -16,8 +16,6 @@
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
-    "test:performance": "playwright test tests/performance-benchmarks.spec.ts",
-    "test:optimization": "playwright test tests/image-optimization.spec.ts",
     "test:report": "playwright show-report",
     "test:update-screenshots": "node scripts/update-screenshots.js"
   },
