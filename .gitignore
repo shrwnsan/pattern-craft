@@ -30,6 +30,11 @@ test-results.json
 .DS_Store
 *.pem
 
+# backups and temporary files
+/backups/
+**/snapshots-original-backup/
+**/snapshots-backup/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
