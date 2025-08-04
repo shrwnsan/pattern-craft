@@ -171,6 +171,18 @@ npm run test:report
 
 For detailed testing documentation, see [`docs/TESTING.md`](docs/TESTING.md).
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the [`docs/`](docs/) directory:
+
+- **[📋 Documentation Index](docs/README.md)** - Navigate all documentation
+- **[🧪 Testing Guide](docs/TESTING.md)** - Complete testing infrastructure guide
+- **[📊 Bundle Analysis](docs/BUNDLE_ANALYSIS_REPORT.md)** - Performance optimization report
+- **[🚀 Optimization Plan](docs/OPTIMIZATION_PLAN.md)** - Enhancement roadmap
+- **[🌐 Hosting Analysis](docs/HOSTING_ANALYSIS.md)** - Deployment configuration guide
+
+Start with the [Documentation Index](docs/README.md) for organized access to all guides and reports.
+
 ## How to Use This
 
 1. Visit the live site: **[https://patterncraft.fun](https://pattern-craft.vercel.app/)**
@@ -399,8 +411,28 @@ For questions, issues, or suggestions:
 
 ## Built By
 
-- Twitter: [@meghtrix](https://x.com/meghtrix)
-- GitHub: [@megh-bari](https://github.com/megh-bari)
+### Original Creator
+- **Megh Bari** - Project founder and lead developer
+  - Twitter: [@meghtrix](https://x.com/meghtrix)
+  - GitHub: [@megh-bari](https://github.com/megh-bari)
+
+### Major Contributors
+- **[@shrwnsan](https://github.com/shrwnsan)  Warp.dev Terminal  Claude 4 Sonnet (Anthropic)** - Performance  Testing Infrastructure
+  - Comprehensive Playwright testing suite with visual regression and performance benchmarks
+  - Bundle optimization and analysis implementation with Next.js webpack analyzer
+  - GitHub Actions CI/CD pipeline for automated deployment to GitHub Pages
+  - Documentation organization and comprehensive technical guides
+  - Next.js static export configuration optimization
+  - Pattern data architecture improvements with code splitting and dynamic loading
+  - Performance enhancements and build process optimization
+
+### Community
+Thanks to all contributors who have helped improve Pattern Craft through:
+- Pattern submissions and enhancements
+- Bug reports and feature requests
+- Documentation improvements
+- Performance optimizations
+- Testing and quality assurance
 
 If you like this project, consider giving it a ⭐️ on GitHub and sharing it with others!
 

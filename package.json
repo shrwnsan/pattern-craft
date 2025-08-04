@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "ANALYZE=true npm run build",
     "start": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.4.5",
     "@playwright/test": "^1.54.2",
     "@squoosh/lib": "^0.3.1",
     "@tailwindcss/postcss": "^4",

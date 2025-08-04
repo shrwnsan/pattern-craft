@@ -1,5 +1,9 @@
 import { Pattern } from "../types/pattern";
 
+// TODO: Future optimization - split patterns by category for code splitting
+// This large patterns array could be split into separate files and loaded dynamically
+// to reduce initial bundle size
+
 export const gridPatterns: Pattern[] = [
   {
     id: "top-gradient-radial",
