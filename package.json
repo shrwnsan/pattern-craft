@@ -3,6 +3,7 @@
   "author": "Megh",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shrwnsan.github.io/pattern-craft/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

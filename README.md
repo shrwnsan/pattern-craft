@@ -17,24 +17,14 @@
     <img src="https://img.shields.io/github/stars/megh-bari/pattern-craft?style=social" alt="GitHub stars" />
 <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks" />
 <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License" />
-<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-    <img src="https://img.shields.io/badge/Sponsored%20by-Vercel-000000?style=social&logo=vercel&logoColor=white" alt="Sponsored by Vercel" />
-</a>
+<img src="https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222222?style=social&logo=github&logoColor=white" alt="Hosted on GitHub Pages" />
     
   </p>
 </div>
 
 ---
 
->**This project is proudly sponsored by [Vercel](https://vercel.com?utm_source=patterncraft&utm_campaign=oss). Thank you for supporting open source!**
-
-  <p align="center">
-<a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-  <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="32">
-</a>
-</p>
-
-## Visit: **[Pattern Craft](https://patterncraft.megh.me)**
+## Visit: **[Pattern Craft](https://shrwnsan.github.io/pattern-craft/)**
 
 ![UI Image](./public/images/readme-img-one.png)
 ![UI Image](./public/images/readme-img-two.png)
@@ -67,20 +57,15 @@ Check out this growing list of shoutouts, showcases, and love from the community
 - **Next.js 14** - React framework with App Router
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
-- **Vercel** - Deployment and hosting
+- **GitHub Pages** - Deployment and hosting
 - **Playwright** - Automated testing and performance validation
 
 
-## Sponsored by <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">Vercel⚡</a>
+## Hosted on GitHub Pages
 
-**This project is proudly powered by <b>Vercel</b> — the platform behind PatternCraft’s blazing-fast deployment and seamless scalability.**<br>
+**This project is hosted on GitHub Pages with automated deployment via GitHub Actions.**<br>
 
-<i>Big thanks to Vercel for supporting open source and keeping this project running smoothly!</i>
-  <br><br>
-  <a href="https://vercel.com?utm_source=patterncraft&utm_campaign=oss">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
-  </a>
-</p>
+<i>Free, reliable hosting for open source projects with seamless CI/CD integration!</i>
 
 
 ## Getting Started
@@ -185,7 +170,7 @@ Start with the [Documentation Index](docs/README.md) for organized access to all
 
 ## How to Use This
 
-1. Visit the live site: **[https://patterncraft.fun](https://pattern-craft.vercel.app/)**
+1. Visit the live site: **[https://shrwnsan.github.io/pattern-craft/](https://shrwnsan.github.io/pattern-craft/)**
 2. Browse through the collection of background patterns and gradients.
 3. Click on any pattern to open its preview modal.
 4. Copy the CSS/Tailwind-compatible code snippet.
@@ -273,7 +258,6 @@ Each pattern includes:
 
 ## Contributing
 
->**This project is sponsored by Vercel, which helps us maintain a stable development environment.**
 
 We welcome contributions to expand the pattern collection. To add new patterns:
 
@@ -439,4 +423,3 @@ If you like this project, consider giving it a ⭐️ on GitHub and sharing it w
 ---
 
 > _**Happy coding!**_
-# Test deployment Mon  4 Aug 2025 14:58:15 HKT
