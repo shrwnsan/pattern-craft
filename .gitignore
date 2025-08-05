@@ -30,6 +30,7 @@ tests/*-snapshots/
 # misc
 .DS_Store
 *.pem
+/tmp/
 
 # backups and temporary files
 /backups/
