@@ -20,6 +20,9 @@
 <img src="https://img.shields.io/github/forks/megh-bari/pattern-craft?style=social" alt="GitHub forks" />
 <img src="https://img.shields.io/github/license/megh-bari/pattern-craft?style=social" alt="License" />
 <img src="https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222222?style=social&logo=github&logoColor=white" alt="Hosted on GitHub Pages" />
+<a href="https://vercel.com/oss">
+    <img src="https://img.shields.io/badge/Sponsored%20by-Vercel-000000?style=social&logo=vercel&logoColor=black" alt="Sponsored by Vercel" />
+</a>
     
   </p>
 </div>
@@ -27,6 +30,14 @@
 ---
 
 ## Visit: **[Pattern Craft](https://shrwnsan.github.io/pattern-craft/)**
+
+> **This project is proudly sponsored by [Vercel](https://vercel.com/oss). Thank you for supporting open source!**
+
+<p align="center">
+  <a href="https://vercel.com/oss">
+    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
+  </a>
+</p>
 
 ![UI Image](./public/images/readme-img-one.png)
 ![UI Image](./public/images/readme-img-two.png)
@@ -38,9 +49,15 @@
 
 ## Pattern Craft in the Wild!!!
 
-Curious where Pattern Craft is getting featured, shared, talk about or appreciated?  
+<p align="left"> 
+Curious where Pattern Craft is getting featured, shared, talk about or appreciated? 
+</br>
 Check out this growing list of shoutouts, showcases, and love from the community:  
-🧩 [**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
+</br>
+
+⚡[**Where Pattern Craft is Making Noise??**](https://patterncraft.notion.site/Where-Pattern-Craft-is-Making-Noise-23bf940b4137803ea79bf3606acdb317?pvs=74)
+</p>
+
 
 ## ⚡ Performance  Optimization
 
@@ -86,13 +103,25 @@ Check out this growing list of shoutouts, showcases, and love from the community
 - **GitHub Pages** - Deployment and hosting
 - **Playwright** - Automated testing and performance validation
 
+## Sponsored by <a href="https://vercel.com/oss">Vercel⚡</a>
 
+<<<<<<< HEAD
 ## Hosted on GitHub Pages
 
 **This project is hosted on GitHub Pages with automated deployment via GitHub Actions.**<br>
 
 <i>Free, reliable hosting for open source projects with seamless CI/CD integration!</i>
+=======
+**This project is proudly powered by <b>Vercel</b>. The platform behind PatternCraft’s blazing-fast deployment and seamless scalability.**<br>
 
+<i>Big thanks to Vercel for supporting open source and keeping this project running smoothly!</i>
+<br><br>
+<a href="https://vercel.com/oss">
+<img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by Vercel" height="40">
+</a>
+>>>>>>> 9b18cce ( (docs): reduce readme-image size and well maintain the docs)
+
+</p>
 
 ## Getting Started
 
@@ -288,6 +317,10 @@ Each pattern includes:
 
 ## Contributing
 
+<<<<<<< HEAD
+=======
+> **This project is sponsored by Vercel, which helps us maintain a stable development environment.**
+>>>>>>> 9b18cce ( (docs): reduce readme-image size and well maintain the docs)
 
 We welcome contributions to expand the pattern collection. To add new patterns:
 
@@ -379,6 +412,7 @@ git push origin feature/new-pattern-name
 
 ```
 pattern-craft/
+<<<<<<< HEAD
 ├── src/
 │   ├── app/
 │   │   ├── components/
@@ -396,6 +430,53 @@ pattern-craft/
 │   │   └── page.tsx
 │   └── components/
 │       └── ui/                    # shadcn/ui components
+=======
+src/
+├── app/                   
+│   ├── globals.css       
+│   ├── layout.tsx        
+│   ├── page.tsx           
+│   └── not-found.tsx      
+│
+├── components/           
+│   ├── ui/                # shadcn/ui components
+│   │   ├── badge.tsx     
+│   │   ├── button.tsx     
+│   │   └── tabs.tsx       
+│   ├── layout/            
+│   │   ├── navbar.tsx     
+│   │   └── footer.tsx     
+│   ├── patterns/          
+│   │   ├── pattern-showcase.tsx     
+│   │   ├── pattern-card.tsx        
+│   │   ├── pattern-grid.tsx         
+│   │   └── pattern-empty-state.tsx 
+│   ├── home/             
+│   │   ├── hero.tsx               
+│   │   ├── support-dropdown.tsx   
+│   │   └── return-to-preview.tsx  
+│   └── providers/         
+│       └── theme-provider.tsx 
+│
+├── lib/                   
+│   ├── utils.ts           
+│   └── constants.ts      
+│
+├── hooks/                 
+│   ├── useTheme.tsx       
+│   └── useCopy.tsx        
+│
+├── types/                 
+│   ├── pattern.ts         
+│   └── index.ts           
+│
+├── context/               
+│   └── favourites-context.tsx 
+│
+└── data/                 
+    ├── patterns.ts        # Pattern used in UI (contribute here)
+    └── categories.ts      
+>>>>>>> 9b18cce ( (docs): reduce readme-image size and well maintain the docs)
 ```
 
 ### Code Standards
