@@ -1,60 +1,44 @@
 "use client";
 
-import Hero from "./components/hero";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import PatternShowcase from "./components/pattern-showcase";
 import { useState, useEffect } from "react";
-import { ThemeProvider } from "./components/theme-provider";
-import { initializePatterns } from "./utils/patterns/index";
-import { Pattern } from "./types/pattern";
 import { Toaster } from "sonner";
-import SupportDropdown from "./components/SupportDropdownProps ";
-import ReturnToPreview from "./components/ReturnToPreview";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { useTheme } from "@/hooks/useTheme";
+import { gridPatterns } from "@/data/patterns";
+import type { Pattern } from "@/types/pattern";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+import Hero from "@/components/home/hero";
+import PatternShowcase from "@/components/patterns/pattern-showcase";
+import SupportDropdown from "@/components/home/support-dropdown";
+import ReturnToPreview from "@/components/home/return-to-preview";
 
 export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const { theme, updateThemeFromPattern } = useTheme();
   const [patterns, setPatterns] = useState<Pattern[]>([]);
   const [patternsLoaded, setPatternsLoaded] = useState(false);
 
-  // Load patterns on component mount
+  // Set patterns as loaded on component mount
   useEffect(() => {
-    const loadPatterns = async () => {
-      try {
-        const loadedPatterns = await initializePatterns();
-        setPatterns(loadedPatterns);
-        setPatternsLoaded(true);
-      } catch (error) {
-        console.error('Failed to load patterns:', error);
-      }
-    };
-    loadPatterns();
+    setPatterns(gridPatterns);
+    setPatternsLoaded(true);
   }, []);
+
+  // Update theme based on pattern background color
+  useEffect(() => {
+    if (activePattern) {
+      const pattern = patterns.find(p => p.name === activePattern);
+      if (pattern) {
+        updateThemeFromPattern(activePattern, patterns);
+      }
+    }
+  }, [activePattern, patterns, updateThemeFromPattern]);
 
   // Find the active pattern object
   const activePatternObj = activePattern
     ? patterns.find((p) => p.id === activePattern)
     : null;
-
-  // Update theme based on pattern background color
-  useEffect(() => {
-    if (activePatternObj) {
-      // Check if pattern ID starts with "dark-" or contains specific dark colors
-      const background = activePatternObj.style.background || "";
-      const isDark =
-        activePatternObj.id.startsWith("dark-") ||
-        (typeof background === "string" &&
-          (background.includes("#0") ||
-            background.includes("#1") ||
-            background.includes("rgba(0,") ||
-            background.includes("rgba(1,")));
-
-      setTheme(isDark ? "dark" : "light");
-    } else {
-      setTheme("light");
-    }
-  }, [activePattern, activePatternObj]);
 
   return (
     <>
@@ -66,7 +50,7 @@ export default function Home() {
           )}
           <div className="relative z-10">
             <Navbar theme={theme} />
-            <SupportDropdown theme={theme}/>
+            <SupportDropdown theme={theme} />
             <Hero
               activePattern={activePattern}
               setActivePattern={setActivePattern}
@@ -77,7 +61,6 @@ export default function Home() {
                 activePattern={activePattern}
                 setActivePattern={setActivePattern}
                 theme={theme}
-                patterns={patterns}
               />
             ) : (
               <div className="container pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
@@ -89,7 +72,7 @@ export default function Home() {
             )}
             <Footer theme={theme} />
           </div>
-          <ReturnToPreview theme={theme}  />
+          <ReturnToPreview theme={theme} />
         </div>
         <Toaster />
       </ThemeProvider>
