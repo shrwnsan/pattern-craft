@@ -75,7 +75,7 @@ test.describe('Performance Benchmarks', () => {
       metrics.push({
         run: i + 1,
         totalLoadTime: loadTime,
-        ...webVitals
+        ...(webVitals || {}) // Safely spread webVitals if it exists, otherwise use an empty object
       });
       
       // Clear cache between runs
