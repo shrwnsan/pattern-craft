@@ -1,6 +1,6 @@
 import { Pattern } from "../../types/pattern";
 
-export const geometricPatterns: Pattern[] = [
+export const geometricPatterns = [
   {
     id: "purple-gradient-grid-right",
     name: "Purple Gradient Grid Right",
