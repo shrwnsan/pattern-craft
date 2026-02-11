@@ -153006,5 +153006,4 @@ export const effectsPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  },
 ];

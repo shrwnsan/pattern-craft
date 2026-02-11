@@ -265813,5 +265813,4 @@ export const geometricPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  },
 ];

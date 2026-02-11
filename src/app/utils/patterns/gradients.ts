@@ -59085,5 +59085,4 @@ export const gradientsPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
-  },
 ];
