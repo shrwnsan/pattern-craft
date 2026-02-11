@@ -1,5 +1,3 @@
-import { Pattern } from "../../types/pattern";
-
 export const geometricPatterns = [
   {
     id: "purple-gradient-grid-right",
