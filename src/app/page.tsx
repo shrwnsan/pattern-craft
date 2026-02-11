@@ -4,9 +4,9 @@ import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import PatternShowcase from "./components/pattern-showcase";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ThemeProvider } from "./components/theme-provider";
-import { initializePatterns } from "./utils/patterns/index";
+import { loadPatternsByCategory, PatternCategory } from "./utils/patterns/index";
 import { Pattern } from "./types/pattern";
 import { Toaster } from "sonner";
 import SupportDropdown from "./components/SupportDropdownProps ";
@@ -16,21 +16,34 @@ export default function Home() {
   const [activePattern, setActivePattern] = useState<string | null>(null);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [patterns, setPatterns] = useState<Pattern[]>([]);
-  const [patternsLoaded, setPatternsLoaded] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<PatternCategory>("geometric");
+  const [categoriesLoaded, setCategoriesLoaded] = useState<Record<PatternCategory, boolean>>({
+    gradients: false,
+    geometric: false,
+    decorative: false,
+    effects: false,
+  });
 
-  // Load patterns on component mount
+  // Load patterns by category (lazy load)
+  const loadCategoryPatterns = useCallback(async (category: PatternCategory) => {
+    if (categoriesLoaded[category]) return;
+    try {
+      const categoryPatterns = await loadPatternsByCategory(category);
+      setPatterns(prev => {
+        const existingIds = new Set(prev.map(p => p.id));
+        const newPatterns = categoryPatterns.filter(p => !existingIds.has(p.id));
+        return [...prev, ...newPatterns];
+      });
+      setCategoriesLoaded(prev => ({ ...prev, [category]: true }));
+    } catch (error) {
+      console.error(`Failed to load ${category} patterns:`, error);
+    }
+  }, [categoriesLoaded]);
+
+  // Load first category on mount, others on demand
   useEffect(() => {
-    const loadPatterns = async () => {
-      try {
-        const loadedPatterns = await initializePatterns();
-        setPatterns(loadedPatterns);
-        setPatternsLoaded(true);
-      } catch (error) {
-        console.error('Failed to load patterns:', error);
-      }
-    };
-    loadPatterns();
-  }, []);
+    loadCategoryPatterns(activeCategory);
+  }, [activeCategory, loadCategoryPatterns]);
 
   // Find the active pattern object
   const activePatternObj = activePattern
@@ -72,12 +85,14 @@ export default function Home() {
               setActivePattern={setActivePattern}
               theme={theme}
             />
-            {patternsLoaded ? (
+            {patterns.length > 0 ? (
               <PatternShowcase
                 activePattern={activePattern}
                 setActivePattern={setActivePattern}
                 theme={theme}
                 patterns={patterns}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
               />
             ) : (
               <div className="container pt-6 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
