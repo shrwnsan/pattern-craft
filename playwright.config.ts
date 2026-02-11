@@ -45,12 +45,9 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: 'npx serve -s out -l 3000',
+    command: 'npx http-server out -p 3000 -c-1',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
-    env: {
-      NODE_OPTIONS: '--max-old-space-size=2048'
-    }
   },
 });
