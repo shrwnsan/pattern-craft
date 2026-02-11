@@ -10,7 +10,7 @@ export const loadPatternsByCategory = async (category: PatternCategory): Promise
       return gradientsPatterns;
     case 'geometric':
       const { geometricPatterns } = await import('./geometric');
-      return geometricPatterns;
+      return geometricPatterns as Pattern[];
     case 'decorative':
       const { decorativePatterns } = await import('./decorative');
       return decorativePatterns;
