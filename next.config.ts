@@ -40,10 +40,9 @@ const nextConfig: NextConfig = {
     return config;
   },
   
-  // GitHub Pages serves from subdirectory if not using custom domain
-  // Uncomment and adjust if deploying to username.github.io/repository-name
-  // basePath: '/pattern-craft',
-  // assetPrefix: '/pattern-craft/',
+  // GitHub Pages serves from subdirectory
+  basePath: '/pattern-craft',
+  assetPrefix: '/pattern-craft/',
 };
 
 export default withBundleAnalyzer(nextConfig);

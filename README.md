@@ -120,18 +120,15 @@ yarn install
 pnpm install
 ```
 
-3. Build and preview (recommended for local testing):
+3. Run development server:
 
 ```bash
-npm run build
-npm start
-# Or use serve directly:
-# npm run build && npx serve out -l 3000
+npx next dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3000/pattern-craft](http://localhost:3000/pattern-craft) in your browser
 
-> **Note:** This project uses static export for GitHub Pages hosting (`output: 'export'` in `next.config.ts`). The standard `npm run dev` command does not work with static export. Use `npm run build && npm start` instead for local preview.
+> **Note:** This project uses `basePath: '/pattern-craft'` for GitHub Pages deployment. Due to this, the local development URL requires the `/pattern-craft` prefix. For production builds (recommended before deploying), run `npm run build && npx serve out -l 3000` and open [http://localhost:3000](http://localhost:3000).
 
 ### Testing
 

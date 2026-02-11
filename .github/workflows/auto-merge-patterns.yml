@@ -58,7 +58,6 @@ jobs:
         run: |
           echo "Running TypeScript check..."
           npx tsc --noEmit 2>&1 | head -20 || true
-        continue-on-error: true
       
       - name: Validate pattern syntax
         if: steps.find-pr.outputs.found == 'true'
@@ -69,14 +68,13 @@ jobs:
             exit 1
           fi
           echo "Pattern files are valid TypeScript"
-        continue-on-error: true
       
       - name: Build project
         if: steps.find-pr.outputs.found == 'true'
         run: |
           echo "Building project..."
           npm run build 2>&1 | tail -20
-        continue-on-error: true
+
       
       - name: Enable auto-merge
         if: steps.find-pr.outputs.found == 'true'
