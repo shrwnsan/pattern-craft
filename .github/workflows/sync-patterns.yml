@@ -145,15 +145,9 @@ jobs:
             fi
           done
       
-      - name: Create feature branch and commit
+      - name: Append patterns to files
         if: steps.compare.outputs.has_new == 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          BRANCH_NAME="sync/patterns-$(date +%Y%m%d)"
-          git checkout -b "$BRANCH_NAME"
-          
           for file in /tmp/new_*.ts; do
             if [ -f "$file" ]; then
               category=$(basename "$file" | sed 's/new_//' | sed 's/_patterns.ts//')
@@ -168,20 +162,15 @@ jobs:
               fi
             fi
           done
-          
-          git add src/app/utils/patterns/
-          git commit -m "feat(patterns): sync ${{ steps.compare.outputs.count }} new patterns from upstream [${{ steps.compare.outputs.new_patterns_list }}]"
-          
-          git push origin "$BRANCH_NAME"
-          echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
       
       - name: Create Pull Request
         if: steps.compare.outputs.has_new == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.branch_name }}
+          branch: sync/patterns-${{ github.run_number }}
           base: dev
+          commit-message: "feat(patterns): sync ${{ steps.compare.outputs.count }} new patterns from upstream"
           title: "feat(patterns): sync ${{ steps.compare.outputs.count }} new patterns from upstream"
           body: |
             ## Automated Pattern Sync
