@@ -89,7 +89,6 @@ jobs:
         if: steps.compare.outputs.has_new == 'true'
         run: |
           git show upstream/${{ env.UPSTREAM_BRANCH }}:src/data/patterns.ts > /tmp/upstream_patterns_raw.ts
-          echo "$NEW_PATTERNS" > /tmp/new_patterns.txt
           
           node << 'NODE_SCRIPT'
           const fs = require('fs');
