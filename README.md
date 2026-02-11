@@ -182,7 +182,7 @@ npm run test:report
 - ✅ **Cross-browser compatibility**: 100% functional across all tested browsers
 - ✅ **No console errors** across all browsers
 
-For detailed testing documentation, see [`docs/TESTING.md`](docs/TESTING.md).
+For detailed testing documentation, see [`tests/README.md`](tests/README.md).
 
 ## 📚 Documentation
 
@@ -191,7 +191,7 @@ Comprehensive documentation is available in the [`docs/`](docs/) directory:
 - **[📋 Documentation Index](docs/README.md)** - Navigate all documentation
 - **[⚡ Performance Report](PERFORMANCE.md)** - Detailed optimization achievements and metrics
 - **[🤝 Contributing Guide](CONTRIBUTING.md)** - Pattern creation and contribution guidelines
-- **[🧪 Testing Guide](docs/TESTING.md)** - Complete testing infrastructure guide
+- **[🧪 Testing Guide](tests/README.md)** - Complete testing infrastructure guide
 - **[📊 Bundle Analysis](docs/BUNDLE_ANALYSIS_REPORT.md)** - Performance optimization report
 - **[🚀 Optimization Plan](docs/OPTIMIZATION_PLAN.md)** - Enhancement roadmap
 - **[🌐 Hosting Analysis](docs/HOSTING_ANALYSIS.md)** - Deployment configuration guide

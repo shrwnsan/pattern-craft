@@ -9,7 +9,7 @@ Welcome to the Pattern Craft documentation! This directory contains comprehensiv
 - **[This Index](README.md)** - Documentation navigation
 
 ### Development & Testing
-- **[Testing Guide](TESTING.md)** - Comprehensive testing documentation including Playwright setup, visual regression tests, and performance benchmarks
+- **[Testing Guide](tests/README.md)** - Comprehensive testing documentation including Playwright setup, visual regression tests, and performance benchmarks
 - **[Optimization Plan](OPTIMIZATION_PLAN.md)** - Detailed optimization roadmap and implementation strategies
 
 ### Performance & Analysis
@@ -20,7 +20,7 @@ Welcome to the Pattern Craft documentation! This directory contains comprehensiv
 
 ### For Developers
 1. Start with the [Main README](../README.md) for project setup
-2. Review [Testing Guide](TESTING.md) for testing workflows  
+2. Review [Testing Guide](tests/README.md) for testing workflows  
 3. Check [Optimization Plan](OPTIMIZATION_PLAN.md) for enhancement opportunities
 
 ### For Performance Analysis
@@ -28,7 +28,7 @@ Welcome to the Pattern Craft documentation! This directory contains comprehensiv
 2. [Hosting Analysis](HOSTING_ANALYSIS.md) for deployment insights
 
 ### For Contributors
-1. [Testing Guide](TESTING.md) - Understand the testing infrastructure
+1. [Testing Guide](tests/README.md) - Understand the testing infrastructure
 2. [Optimization Plan](OPTIMIZATION_PLAN.md) - See planned improvements
 3. [Bundle Analysis Report](BUNDLE_ANALYSIS_REPORT.md) - Performance guidelines
 
@@ -42,7 +42,7 @@ Welcome to the Pattern Craft documentation! This directory contains comprehensiv
 
 ### Naming Conventions
 - Use UPPERCASE for report files (e.g., `BUNDLE_ANALYSIS_REPORT.md`)
-- Use sentence case for guides (e.g., `Testing Guide.md` → `TESTING.md`)
+- Use sentence case for guides (e.g., `Testing Guide.md` → `tests/README.md`)
 - Include creation/update dates in reports
 - Use clear, descriptive filenames
 
