@@ -1,0 +1,226 @@
+name: Sync Patterns from Upstream
+
+on:
+  schedule:
+    - cron: '0 0 1,15 * *'
+  workflow_dispatch:
+    inputs:
+      upstream_branch:
+        description: 'Upstream branch to sync from'
+        required: false
+        default: 'main'
+        type: string
+
+env:
+  UPSTREAM_REPO: 'megh-bari/pattern-craft'
+  UPSTREAM_BRANCH: ${{ github.event.inputs.upstream_branch || 'main' }}
+
+jobs:
+  check-and-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    outputs:
+      has_new_patterns: ${{ steps.compare.outputs.has_new }}
+      new_count: ${{ steps.compare.outputs.count }}
+      new_patterns_list: ${{ steps.compare.outputs.patterns_list }}
+    
+    steps:
+      - name: Checkout dev branch
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/${{ env.UPSTREAM_REPO }}.git
+          git fetch upstream ${{ env.UPSTREAM_BRANCH }}
+          echo "Fetched upstream/${{ env.UPSTREAM_BRANCH }}"
+      
+      - name: Extract pattern IDs from upstream
+        run: |
+          git show upstream/${{ env.UPSTREAM_BRANCH }}:src/data/patterns.ts | \
+            grep -E '^\s+id:' | \
+            sed 's/.*id: "\([^"]*\)".*/\1/' | \
+            sort > /tmp/upstream_patterns.txt
+          echo "Upstream patterns: $(wc -l < /tmp/upstream_patterns.txt)"
+          cat /tmp/upstream_patterns.txt
+      
+      - name: Extract pattern IDs from dev
+        run: |
+          cat src/app/utils/patterns/*.ts 2>/dev/null | \
+            grep -E '^\s+id:' | \
+            sed 's/.*id: "\([^"]*\)".*/\1/' | \
+            sort > /tmp/dev_patterns.txt
+          echo "Dev patterns: $(wc -l < /tmp/dev_patterns.txt)"
+      
+      - name: Compare patterns
+        id: compare
+        run: |
+          NEW_PATTERNS=$(comm -23 /tmp/upstream_patterns.txt /tmp/dev_patterns.txt)
+          
+          if [ -z "$NEW_PATTERNS" ]; then
+            echo "has_new=false" >> $GITHUB_OUTPUT
+            echo "count=0" >> $GITHUB_OUTPUT
+            echo "patterns_list=" >> $GITHUB_OUTPUT
+            echo "No new patterns found"
+          else
+            COUNT=$(echo "$NEW_PATTERNS" | wc -l)
+            echo "has_new=true" >> $GITHUB_OUTPUT
+            echo "count=$COUNT" >> $GITHUB_OUTPUT
+            
+            PATTERNS_LIST=$(echo "$NEW_PATTERNS" | paste -sd ', ' -)
+            echo "patterns_list=$PATTERNS_LIST" >> $GITHUB_OUTPUT
+            
+            echo "Found $COUNT new pattern(s):"
+            echo "$NEW_PATTERNS"
+            echo "$NEW_PATTERNS" > /tmp/new_patterns.txt
+          fi
+      
+      - name: Extract and convert new patterns
+        if: steps.compare.outputs.has_new == 'true'
+        run: |
+          git show upstream/${{ env.UPSTREAM_BRANCH }}:src/data/patterns.ts > /tmp/upstream_patterns_raw.ts
+          echo "$NEW_PATTERNS" > /tmp/new_patterns.txt
+          
+          node << 'NODE_SCRIPT'
+          const fs = require('fs');
+          
+          const upstreamContent = fs.readFileSync('/tmp/upstream_patterns_raw.ts', 'utf8');
+          const newPatternIds = fs.readFileSync('/tmp/new_patterns.txt', 'utf8')
+            .split('\n')
+            .filter(id => id.trim());
+          
+          console.log(`Processing ${newPatternIds.length} new patterns...`);
+          
+          const patterns = [];
+          for (const patternId of newPatternIds) {
+            const patternRegex = new RegExp(
+              `\\{\\s*id: "${patternId}"[\\s\\S]*?(?=\\},?\\s*\\{ id:|\\];?$)`,
+              'm'
+            );
+            const match = upstreamContent.match(patternRegex);
+            if (match) {
+              patterns.push({ id: patternId, content: match[0] });
+            }
+          }
+          
+          const byCategory = {};
+          for (const { id, content } of patterns) {
+            const categoryMatch = content.match(/category:\s*"([^"]+)"/);
+            const category = categoryMatch ? categoryMatch[1] : 'effects';
+            
+            if (!byCategory[category]) {
+              byCategory[category] = [];
+            }
+            byCategory[category].push(content);
+          }
+          
+          for (const [category, patternContents] of Object.entries(byCategory)) {
+            const filename = `/tmp/new_${category}_patterns.ts`;
+            fs.writeFileSync(filename, patternContents.join('\n\n'));
+            console.log(`Written ${patternContents.length} patterns to ${filename}`);
+          }
+          
+          fs.writeFileSync('/tmp/sync_metadata.json', JSON.stringify({
+            count: patterns.length,
+            patterns: patterns.map(p => p.id),
+            categories: Object.keys(byCategory)
+          }, null, 2));
+          NODE_SCRIPT
+          
+          echo "=== New patterns by category ==="
+          for file in /tmp/new_*.ts; do
+            if [ -f "$file" ]; then
+              echo ""
+              echo "$(basename $file):"
+              grep -c 'id:' "$file" || echo "0"
+            fi
+          done
+      
+      - name: Create feature branch and commit
+        if: steps.compare.outputs.has_new == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          BRANCH_NAME="sync/patterns-$(date +%Y%m%d)"
+          git checkout -b "$BRANCH_NAME"
+          
+          for file in /tmp/new_*.ts; do
+            if [ -f "$file" ]; then
+              category=$(basename "$file" | sed 's/new_//' | sed 's/_patterns.ts//')
+              target_file="src/app/utils/patterns/${category}.ts"
+              
+              if [ -f "$target_file" ]; then
+                echo "" >> "$target_file"
+                cat "$file" >> "$target_file"
+                echo "Appended to $target_file"
+              else
+                echo "Warning: $target_file not found"
+              fi
+            fi
+          done
+          
+          git add src/app/utils/patterns/
+          git commit -m "feat(patterns): sync ${{ steps.compare.outputs.count }} new patterns from upstream [${{ steps.compare.outputs.new_patterns_list }}]"
+          
+          git push origin "$BRANCH_NAME"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
+      
+      - name: Create Pull Request
+        if: steps.compare.outputs.has_new == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.branch_name }}
+          base: dev
+          title: "feat(patterns): sync ${{ steps.compare.outputs.count }} new patterns from upstream"
+          body: |
+            ## Automated Pattern Sync
+            
+            This PR contains ${{ steps.compare.outputs.count }} new pattern(s) synced from upstream.
+            
+            ### New Patterns
+            ${{ steps.compare.outputs.new_patterns_list }}
+            
+            ### Files Modified
+            - `src/app/utils/patterns/*.ts`
+            
+            ### Verification Checklist
+            - [ ] Patterns render correctly in UI
+            - [ ] Category tabs display new patterns
+            - [ ] Copy-to-clipboard works
+            - [ ] Favorites functionality works
+            - [ ] No duplicate patterns
+            
+            ### Next Steps
+            1. Review the patterns
+            2. Run tests: `npm test`
+            3. Merge if everything looks good
+            
+            ---
+            *Generated by sync-patterns workflow*
+          labels: |
+            automated
+            patterns
+            upstream-sync
+          draft: false
+
+  notify-no-changes:
+    runs-on: ubuntu-latest
+    needs: check-and-sync
+    if: needs.check-and-sync.outputs.has_new_patterns == 'false'
+    steps:
+      - name: Log no changes
+        run: |
+          echo "No new patterns found in upstream. Dev is up to date!"
+          echo "Last check: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
