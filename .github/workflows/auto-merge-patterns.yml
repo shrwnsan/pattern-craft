@@ -1,21 +1,16 @@
 name: Auto-Merge Pattern Sync PRs
 
 on:
-  pull_request:
+  workflow_run:
+    workflows:
+      - "Sync Patterns from Upstream"
     types:
-      - labeled
-      - opened
-      - synchronize
-    branches:
-      - dev
+      - completed
 
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    if: |
-      contains(github.event.pull_request.labels.*.name, 'automated') && 
-      contains(github.event.pull_request.labels.*.name, 'patterns') &&
-      contains(github.event.pull_request.labels.*.name, 'upstream-sync')
+    if: github.event.workflow_run.conclusion == 'success'
     
     permissions:
       contents: write
@@ -23,28 +18,52 @@ jobs:
       checks: read
     
     steps:
-      - name: Checkout
+      - name: Checkout dev branch
         uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+      
+      - name: Find pattern sync PR
+        id: find-pr
+        run: |
+          # Find the PR created by the sync workflow
+          PR_NUMBER=$(gh pr list --state open --label "automated" --label "patterns" --label "upstream-sync" --json number --jq '.[0].number')
+          
+          if [ -z "$PR_NUMBER" ]; then
+            echo "No pattern sync PR found"
+            echo "found=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          echo "Found PR #$PR_NUMBER"
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
+          echo "found=true" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup Node.js
+        if: steps.find-pr.outputs.found == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
       
       - name: Install dependencies
+        if: steps.find-pr.outputs.found == 'true'
         run: npm ci
       
       - name: Type check
+        if: steps.find-pr.outputs.found == 'true'
         run: |
           echo "Running TypeScript check..."
           npx tsc --noEmit 2>&1 | head -20 || true
         continue-on-error: true
       
       - name: Validate pattern syntax
+        if: steps.find-pr.outputs.found == 'true'
         run: |
           echo "Validating pattern files..."
-          # Check if pattern files are valid TypeScript
           if npx tsc --noEmit src/app/utils/patterns/*.ts 2>&1 | grep -q "error"; then
             echo "TypeScript errors found in pattern files"
             exit 1
@@ -53,15 +72,17 @@ jobs:
         continue-on-error: true
       
       - name: Build project
+        if: steps.find-pr.outputs.found == 'true'
         run: |
           echo "Building project..."
           npm run build 2>&1 | tail -20
         continue-on-error: true
       
       - name: Auto-approve PR
+        if: steps.find-pr.outputs.found == 'true'
         uses: hmarr/auto-approve-action@v4
         with:
-          pull-request-number: ${{ github.event.pull_request.number }}
+          pull-request-number: ${{ steps.find-pr.outputs.pr_number }}
           review-message: |
             ✅ **Auto-approved**: Pattern sync passed validation
             
@@ -73,18 +94,19 @@ jobs:
             Ready for auto-merge.
       
       - name: Enable auto-merge
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ github.event.pull_request.number }}
-          merge-method: squash
+        if: steps.find-pr.outputs.found == 'true'
+        run: |
+          gh pr merge ${{ steps.find-pr.outputs.pr_number }} --auto --squash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Post success comment
+        if: steps.find-pr.outputs.found == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: ${{ steps.find-pr.outputs.pr_number }},
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `## 🤖 Auto-Merge Enabled
@@ -97,5 +119,5 @@ jobs:
             
             **Note:** Auto-merge will complete once all required checks pass.
             
-            If you need to cancel, remove the \`automated\` label or close the PR.`
+            If you need to cancel, run: \`gh pr merge ${{ steps.find-pr.outputs.pr_number }} --disable-auto\``
             })
