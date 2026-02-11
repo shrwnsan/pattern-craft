@@ -776,8 +776,7 @@ export const effectsPatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-  }
-];
+  },
 
 {
     id: "aurora-dream-corner-whispers",
@@ -153007,3 +153006,5 @@ export const effectsPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  },
+];

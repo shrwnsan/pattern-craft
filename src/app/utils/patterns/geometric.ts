@@ -1656,8 +1656,7 @@ export const geometricPatterns: Pattern[] = [
   
     {/* Your Content/Components */}
   </div>`,
-  }
-];
+  },
 
 {
     id: "dark-circuit-board",
@@ -265814,3 +265813,5 @@ export const geometricPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  },
+];

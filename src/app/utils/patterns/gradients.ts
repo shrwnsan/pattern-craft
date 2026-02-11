@@ -351,8 +351,7 @@ export const gradientsPatterns: Pattern[] = [
     />
     {/* Your Content/Components */}
   </div>`,
-  }
-];
+  },
 
 {
     id: "aurora-edge-glow",
@@ -59086,3 +59085,5 @@ export const gradientsPatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+  },
+];

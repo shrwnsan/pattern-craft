@@ -438,8 +438,7 @@ export const decorativePatterns: Pattern[] = [
   />
   {/* Your Content/Components */}
 </div>`,
-  }
-];
+  },
 
 {
     id: "blue-corner-glow",
@@ -88446,3 +88445,4 @@ export const decorativePatterns: Pattern[] = [
   {/* Your Content/Components */}
 </div>`,
   },
+];
