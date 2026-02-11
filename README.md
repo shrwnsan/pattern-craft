@@ -120,24 +120,18 @@ yarn install
 pnpm install
 ```
 
-3. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-### Build for Production
+3. Build and preview (recommended for local testing):
 
 ```bash
 npm run build
 npm start
+# Or use serve directly:
+# npm run build && npx serve out -l 3000
 ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+> **Note:** This project uses static export for GitHub Pages hosting (`output: 'export'` in `next.config.ts`). The standard `npm run dev` command does not work with static export. Use `npm run build && npm start` instead for local preview.
 
 ### Testing
 
