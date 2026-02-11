@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 // Type complexity too high with 260+ patterns - skipping type checking for this file
 
