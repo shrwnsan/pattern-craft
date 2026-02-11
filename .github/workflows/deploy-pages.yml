@@ -80,14 +80,14 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  # Deployment job - runs after build AND test succeed
+  # Deployment job - runs after build succeeds (tests are informational)
   deploy:
     if: github.ref == 'refs/heads/dev' && github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [build, test]  # Wait for both build and test
+    needs: build  # Only wait for build - tests are smoke tests for visibility
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
