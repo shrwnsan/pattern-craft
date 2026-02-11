@@ -78,21 +78,6 @@ jobs:
           npm run build 2>&1 | tail -20
         continue-on-error: true
       
-      - name: Auto-approve PR
-        if: steps.find-pr.outputs.found == 'true'
-        uses: hmarr/auto-approve-action@v4
-        with:
-          pull-request-number: ${{ steps.find-pr.outputs.pr_number }}
-          review-message: |
-            ✅ **Auto-approved**: Pattern sync passed validation
-            
-            Automated checks completed:
-            - TypeScript validation
-            - Build verification
-            - Pattern syntax check
-            
-            Ready for auto-merge.
-      
       - name: Enable auto-merge
         if: steps.find-pr.outputs.found == 'true'
         run: |
@@ -114,8 +99,7 @@ jobs:
             This pattern sync PR has been:
             - ✅ Type-checked
             - ✅ Built successfully  
-            - ✅ Auto-approved
-            - 🔄 Scheduled for auto-merge (squash)
+            - ✅ Auto-merge enabled (squash)
             
             **Note:** Auto-merge will complete once all required checks pass.
             
