@@ -6,7 +6,6 @@ import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Check, Copy, Eye, Palette, Sparkles, Star } from "lucide-react";
 import { Pattern } from "../types/pattern";
-import { PatternCategory } from "../utils/patterns/index";
 import { useEffect, useState } from "react";
 
 interface PatternShowcaseProps {
@@ -14,8 +13,6 @@ interface PatternShowcaseProps {
   setActivePattern: (pattern: string | null) => void;
   theme: "light" | "dark";
   patterns: Pattern[];
-  activeCategory: PatternCategory;
-  setActiveCategory: (category: PatternCategory) => void;
 }
 
 export default function PatternShowcase({
@@ -23,25 +20,12 @@ export default function PatternShowcase({
   setActivePattern,
   theme,
   patterns,
-  activeCategory,
-  setActiveCategory,
 }: PatternShowcaseProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [favourite, setFavourite] = useState<string[]>([]);
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<string>(activeCategory);
+  const [activeTab, setActiveTab] = useState<string>("all");
   const isPatternDark = theme === "dark";
-
-  // Sync internal tab with parent category
-  useEffect(() => {
-    setActiveTab(activeCategory);
-  }, [activeCategory]);
-
-  // Sync parent category when tab changes
-  const handleTabChange = (value: string) => {
-    setActiveTab(value);
-    setActiveCategory(value as PatternCategory);
-  };
 
 
   // Load favourite on mount
@@ -132,7 +116,7 @@ export default function PatternShowcase({
       {/* Tabs */}
       <Tabs
         value={activeTab}
-        onValueChange={handleTabChange}
+        onValueChange={setActiveTab}
         className="w-full mb-8"
       >
         {/* Desktop & Tablet Tabs (show on sm and up) */}
@@ -209,7 +193,7 @@ export default function PatternShowcase({
             {categories.map((category) => (
               <button
                 key={`mobile-${category.id}`}
-                onClick={() => handleTabChange(category.id)}
+                onClick={() => setActiveTab(category.id)}
                 className={`
           flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap
           text-sm font-medium transition-all duration-300 ease-in-out
