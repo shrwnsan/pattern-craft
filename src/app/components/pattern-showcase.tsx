@@ -61,12 +61,13 @@ export default function PatternShowcase({
   ];
 
   // filter patterns based on categories
+  const validPatterns = patterns.filter((p): p is Pattern => p != null && typeof p === 'object' && 'id' in p);
   const filteredPatterns =
     activeTab === "all"
-      ? patterns
+      ? validPatterns
       : activeTab === "favourites"
-        ? patterns.filter((pattern) => favourite.includes(pattern.id))
-        : patterns.filter((pattern) => pattern.category === activeTab);
+        ? validPatterns.filter((pattern) => favourite.includes(pattern.id))
+        : validPatterns.filter((pattern) => pattern.category === activeTab);
 
   const copyToClipboard = async (code: string, id: string) => {
     try {

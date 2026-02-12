@@ -345,6 +345,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${GeistSans.className} bg-background text-foreground antialiased min-h-screen flex items-center justify-center`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
