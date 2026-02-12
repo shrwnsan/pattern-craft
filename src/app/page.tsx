@@ -36,7 +36,7 @@ export default function Home() {
       });
       setCategoriesLoaded(prev => ({ ...prev, [category]: true }));
     } catch (error) {
-      console.error(`Failed to load ${category} patterns:`, error);
+      console.error(`Failed to load ${category} patterns:`, error instanceof Error ? error.message : String(error));
     }
   }, [categoriesLoaded]);
 

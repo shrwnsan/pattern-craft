@@ -153,22 +153,28 @@ jobs:
               category=$(basename "$file" | sed 's/new_//' | sed 's/_patterns.ts//')
               target_file="src/app/utils/patterns/${category}.ts"
               
-               if [ -f "$target_file" ]; then
-                 # Create temp file with proper insertion
-                 # 1. Get all lines except the closing "];"
-                 head -n -1 "$target_file" > /tmp/target_temp.ts
-                 
-                 # 2. Add newline and new patterns (each already ends with "  },")
-                 echo "" >> /tmp/target_temp.ts
-                 cat "$file" >> /tmp/target_temp.ts
-                 
-                 # 3. Add closing bracket back (no extra "}," needed - patterns already include it)
-                 echo "];" >> /tmp/target_temp.ts
-                
-                # 4. Replace original file
-                mv /tmp/target_temp.ts "$target_file"
-                echo "Inserted patterns into $target_file"
-              else
+                if [ -f "$target_file" ]; then
+                  # Create temp file with proper insertion (idempotent - check for duplicates)
+                  # 1. Get all lines except closing "];"
+                  head -n -1 "$target_file" > /tmp/target_temp.ts
+                  
+                  # 2. Add newline and new patterns (only if IDs don't already exist)
+                  echo "" >> /tmp/target_temp.ts
+                  while IFS= read -r id && IFS= read -r pattern; do
+                    if ! grep -q "id: \"$id\"" "$target_file"; then
+                      echo "$pattern" >> /tmp/target_temp.ts
+                      echo "  }," >> /tmp/target_temp.ts
+                    fi
+                  done < "$file"
+                  
+                  # 3. Add closing bracket back
+                  echo "  }," >> /tmp/target_temp.ts
+                  echo "];" >> /tmp/target_temp.ts
+                  
+                  # 4. Replace original file
+                  mv /tmp/target_temp.ts "$target_file"
+                  echo "Inserted patterns into $target_file (checked for duplicates)"
+                else
                 echo "Warning: $target_file not found"
               fi
             fi
